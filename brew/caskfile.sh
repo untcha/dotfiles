@@ -1,6 +1,6 @@
 #!/bin/bash
 
-install cask() {
+install_casks() {
 	# tap cask and versions
 	brew tap caskroom/cask
 	brew tap caskroom/versions
