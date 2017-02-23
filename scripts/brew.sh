@@ -10,3 +10,10 @@ fi
 
 echo "Updating homebrew..."
 brew update
+
+read -p "Would you like to install brews? [y/n]" -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  echo "Installing..."
+  source ./brew/brewfile.sh
+  install_brews
+fi
