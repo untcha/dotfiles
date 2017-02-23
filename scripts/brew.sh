@@ -12,8 +12,8 @@ echo "Updating Homebrew..."
 brew update
 
 read -p "Would you like to install brews? [y/n]" -n 1 -r
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-  echo "Installing..."
-  source ./brew/brewfile.sh
-  install_brews
+if [[ $REPLY =~ ^[Yy]$ ]]; then -n
+	echo "Installing..."
+	source ../brew/brewfile.sh
+	install_brews
 fi
