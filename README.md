@@ -1,6 +1,6 @@
 # Alexander's dotfiles
 
-![dotfiles](https://www.dropbox.com/s/tja3mc4qs76wnv3/dotfiles.png)
+![dotfiles](https://dl.dropboxusercontent.com/s/tja3mc4qs76wnv3/dotfiles.png)
 
 ## Installation
 Dependencies needed for the installation:
