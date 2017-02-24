@@ -55,7 +55,7 @@ else
 fi
 
 # Check if font "Meslo" is installed; install (copy from iTerm2) if not
-if [[ -e "/Users/$(whoami)/Library/Fonts/Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline.otf" ]];
+if [[ -e "/Users/$(whoami)/Library/Fonts/Meslo LG M DZ Regular for Powerline.otf" ]];
 then
 	echo "Font Meslo LG M DZ Regular for Powerline is already installed!";
 else
