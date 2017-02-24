@@ -53,3 +53,27 @@ else
 	brew cask install iterm2;
 	echo "iTerm2 is now installed!"
 fi
+
+# Check if font "Meslo" is installed; install (copy from iTerm2) if not
+if [[ -e "/Users/$(whoami)/Library/Fonts/Meslo LG M DZ Regular for Powerline.otf" ]];
+then
+	echo "Font Meslo LG M DZ Regular for Powerline is already installed!";
+else
+	echo "Font Meslo LG M DZ Regular for Powerline is NOT installed! Installing Meslo...";
+	echo "...";
+	echo "Font Meslo LG M DZ Regular for Powerline is now installed!";
+fi
+
+###############################################################################
+# Further tweaking.                                                           #
+###############################################################################
+
+
+
+
+
+
+
+
+
+
