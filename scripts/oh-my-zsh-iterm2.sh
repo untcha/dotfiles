@@ -33,7 +33,7 @@ fi
 ###############################################################################
 
 # Check if Oh-My-Zsh is installed; install if not
-if [[ -d "~/.oh-my-zsh" ]];
+if [[ -e "~/.oh-my-zsh/oh-my-zsh.sh" ]];
 then
 	echo "Oh-My-Zsh is already installed!";
 else
