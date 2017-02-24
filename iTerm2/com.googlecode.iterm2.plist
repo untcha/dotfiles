@@ -223,10 +223,12 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>3D4FEA7C-C551-4C6E-89F8-42619AFF064F</string>
+	<key>HideScrollbar</key>
+	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads</string>
+	<string>~</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -265,7 +267,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 779 620 392 0 0 2560 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>495 502 796 473 0 0 2560 1418 </string>
+	<string>1568 558 796 473 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>1280 728 1277 690 0 0 2560 1418 </string>
 	<key>New Bookmarks</key>
@@ -1540,7 +1542,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/untcha/Downloads</string>
+	<string>/Users/untcha/Projects/dotfiles/iTerm2</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>
@@ -1552,7 +1554,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-02-22T21:10:02Z</date>
+	<date>2017-02-24T15:01:19Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>
