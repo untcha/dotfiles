@@ -20,6 +20,7 @@ echo $DOTFILE_STRING $WRENCH_EMOJI ": Updating Homebrew...";
 brew update;
 
 read -p "Would you like to install brews? [y/n]" -n 1;
+echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
 	echo " " -n;
@@ -30,6 +31,7 @@ then
 fi
 
 read -p "Would you like to install casks? [y/n]" -n 1;
+echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
 	echo " " -n;
