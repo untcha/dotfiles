@@ -77,7 +77,7 @@ then
 else
 	echo "zsh-autosuggestions is NOT installed! Installing zsh-autosuggestions...";
 	echo "...";
-	git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions;
+	sudo git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions;
 	echo "zsh-autosuggestions is now installed!";
 fi
 
