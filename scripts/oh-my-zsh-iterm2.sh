@@ -101,7 +101,3 @@ then
 else
 	echo $DOTFILE_STRING $OK_EMOJI ": Nothing to clean up!";
 fi
-
-
-
-
