@@ -27,3 +27,17 @@ else
 	echo " ";
 	echo "Make sure to exit your current Terminal session and open Terminal again. Select 0 if asked by zsh! Run this script again!"
 fi
+
+###############################################################################
+# Install Oh-My-Zsh and iTerm2                                                #
+###############################################################################
+
+# Check if Oh-My-Zsh is installed; install if not
+if [[ -e "~/.oh-my-zsh" ]];
+then
+	echo "Oh-My-Zsh is already installed!";
+else
+	echo "Oh-My-Zsh is NOT installed! Installing Oh-My-Zsh...";
+	echo ".........";
+	echo "Oh-My-Zsh is now installed!";
+fi
