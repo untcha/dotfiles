@@ -1,5 +1,10 @@
 #!/bin/bash
 
+DOTFILE_STRING="[dotfile] ";
+WRENCH_EMOJI=$'\xF0\x9F\x94\xA7';
+OK_EMOJI=$'\xE2\x9C\x85';
+NOK_EMOJI=$'\xE2\x9B\x94';
+
 ###############################################################################
 # Install zsh via homebrew and set as default shell                           #
 ###############################################################################
@@ -7,7 +12,7 @@
 # Check if zsh is installed via homebrew; install if not
 if [[ -e "/usr/local/bin/zsh" ]];
 then
-	echo "zsh is already installed via homebrew!";
+	echo $DOTFILE_STRING $OK_EMOJI " zsh is already installed via homebrew!";
 else
 	echo "zsh is NOT installed! Installing zsh via homebrew...";
 	brew install zsh;
