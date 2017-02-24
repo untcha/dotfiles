@@ -23,7 +23,6 @@ read -p "Would you like to install brews? [y/n]" -n 1;
 echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
-	echo " " -n;
 	echo $DOTFILE_STRING $WRENCH_EMOJI ": Installing brews...";
 	source ../brew/brewfile.sh;
 	install_brews;
@@ -34,7 +33,6 @@ read -p "Would you like to install casks? [y/n]" -n 1;
 echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
-	echo " " -n;
 	echo $DOTFILE_STRING $WRENCH_EMOJI ": Installing casks...";
 	source ../brew/caskfile.sh;
 	install_casks;
