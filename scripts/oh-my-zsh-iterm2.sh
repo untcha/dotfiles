@@ -66,7 +66,7 @@ else
 fi
 
 ###############################################################################
-# Further tweaking.                                                           #
+# Further tweaking                                                            #
 ###############################################################################
 
 # Auto suggestions (for Oh My Zsh)
@@ -77,11 +77,13 @@ then
 else
 	echo "zsh-autosuggestions is NOT installed! Installing zsh-autosuggestions...";
 	echo "...";
-	sudo git clone git://github.com/zsh-users/zsh-autosuggestions /Users/$(whoami)/.oh-my-zsh/custom/plugins/zsh-autosuggestions;
+	git clone git://github.com/zsh-users/zsh-autosuggestions /Users/$(whoami)/.oh-my-zsh/custom/plugins/zsh-autosuggestions;
 	echo "zsh-autosuggestions is now installed!";
 fi
 
-
+###############################################################################
+# Clean up                                                                    #
+###############################################################################
 
 
 
