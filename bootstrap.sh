@@ -18,6 +18,7 @@ function doIt() {
 		--exclude ".gitignore" \
 		--exclude "brew/" \
 		--exclude "scripts/" \
+		--exclude "iTerm2/" \
 		--exclude ".DS_Store" \
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
