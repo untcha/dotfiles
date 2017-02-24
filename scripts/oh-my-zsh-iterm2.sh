@@ -61,6 +61,7 @@ then
 else
 	echo "Font Meslo LG M DZ Regular for Powerline is NOT installed! Installing Meslo...";
 	echo "...";
+	cp ../iTerm2/Meslo LG M DZ Regular for Powerline.otf /Users/$(whoami)/Library/Fonts;
 	echo "Font Meslo LG M DZ Regular for Powerline is now installed!";
 fi
 
