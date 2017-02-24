@@ -7,9 +7,6 @@ FIRE_EMOJI=$'\xF0\x9F\x94\xA5';
 OK_EMOJI=$'\xE2\x9C\x85';
 NOK_EMOJI=$'\xE2\x9B\x94';
 
-# after java
-# ant maven jenv bazel
-
 ###############################################################################
 # Install Java 7 and Java 8                                                   #
 ###############################################################################
@@ -58,4 +55,12 @@ jenv add $JDK7_PATH;
 jenv add $JDK8_PATH;
 jenv rehash
 
-brew update && brew cleanup && brew doctor;
+###############################################################################
+# Install brews who need Java                                                 #
+###############################################################################
+brew update;
+brew install ant;
+brew install bazel;
+brew install maven;
+
+brew cleanup && brew doctor;
