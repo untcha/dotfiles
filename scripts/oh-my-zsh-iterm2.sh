@@ -42,3 +42,14 @@ else
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
 	echo "Oh-My-Zsh is now installed!";
 fi
+
+# Check if iTerm2 is installed; install via homebrew cask if not
+if [[ -e "/Applications/iTerm.app" ]];
+then
+	echo "iTerm2 is already installed!";
+else
+	echo "iTerm2 is NOT installed! Installing iTerm2...";
+	echo "...";
+	brew cask install iterm2;
+	echo "iTerm2 is now installed!"
+fi
