@@ -23,7 +23,7 @@ fi
 # Check if zsh is default shell; make default shell if not
 if [[ $SHELL = "/usr/local/bin/zsh" ]];
 then
-	echo "zsh is already set as default shell!";
+	echo $DOTFILE_STRING $OK_EMOJI ": zsh is already the default shell!";
 else
 	echo "zsh is NOT set as default shell! Setting zsh as default shell...";
 	echo "...";
@@ -40,7 +40,7 @@ fi
 # Check if Oh-My-Zsh is installed; install if not
 if [[ -d "/Users/$(whoami)/.oh-my-zsh" ]];
 then
-	echo "Oh-My-Zsh is already installed!";
+	echo $DOTFILE_STRING $OK_EMOJI ": Oh-My-Zsh is already installed!";
 else
 	echo "Oh-My-Zsh is NOT installed! Installing Oh-My-Zsh...";
 	echo "...";
@@ -51,7 +51,7 @@ fi
 # Check if iTerm2 is installed; install via homebrew cask if not
 if [[ -e "/Applications/iTerm.app" ]];
 then
-	echo "iTerm2 is already installed!";
+	echo $DOTFILE_STRING $OK_EMOJI ": iTerm2 is already installed!";
 else
 	echo "iTerm2 is NOT installed! Installing iTerm2...";
 	echo "...";
@@ -62,7 +62,7 @@ fi
 # Check if font "Meslo" is installed; install (copy from iTerm2) if not
 if [[ -e "/Users/$(whoami)/Library/Fonts/Meslo LG M DZ Regular for Powerline.otf" ]];
 then
-	echo "Font Meslo LG M DZ Regular for Powerline is already installed!";
+	echo $DOTFILE_STRING $OK_EMOJI ": Font Meslo LG M DZ Regular for Powerline is already installed!";
 else
 	echo "Font Meslo LG M DZ Regular for Powerline is NOT installed! Installing Meslo...";
 	echo "...";
@@ -78,7 +78,7 @@ fi
 # Check if zsh-autosuggestions is installed; install if not
 if [[ -d "/Users/$(whoami)/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]];
 then
-	echo "zsh-autosuggestions is already installed!";
+	echo $DOTFILE_STRING $OK_EMOJI ": zsh-autosuggestions is already installed!";
 else
 	echo "zsh-autosuggestions is NOT installed! Installing zsh-autosuggestions...";
 	echo "...";
@@ -98,7 +98,7 @@ then
 	echo "Replacing default .zshrc with .zshrc-custom...";
 	mv ~/.zshrc-custom ~/.zshrc;
 else
-	echo "Nothing to clean up!";
+	echo $DOTFILE_STRING $OK_EMOJI ": Nothing to clean up!";
 fi
 
 
