@@ -16,10 +16,10 @@ git clone https://github.com/untcha/dotfiles.git ~/.dotfiles
 
 Running `bootstrap.sh` will copy the following files to your home directory `~`
 - `.zshrc-custom` (this is my custom `.zshrc` file)
-- `.ssh\config` (this is my custom `ssh` configuration)
+- `.ssh/config` (this is my custom `ssh` configuration)
 
 ``` bash
-cd ~/.dotfiles/ && ./bootstrap.sh
+cd ~/.dotfiles && ./bootstrap.sh
 ```
 
 ## Install Homebrew and Cask
