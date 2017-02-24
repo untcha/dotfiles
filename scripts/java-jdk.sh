@@ -58,7 +58,4 @@ jenv add $JDK7_PATH;
 jenv add $JDK8_PATH;
 jenv rehash
 
-
-
-
-# brew update && brew cleanup && brew doctor;
+brew update && brew cleanup && brew doctor;
