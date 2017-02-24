@@ -21,6 +21,6 @@ then
 else
 	echo "zsh is NOT set as default shell! Setting zsh as default shell...";
 	echo "...";
-	#sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells" && chsh -s /usr/local/bin/zsh;
+	sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells" && chsh -s /usr/local/bin/zsh;
 	echo "zsh is now set as default shell!";
 fi
