@@ -71,7 +71,7 @@ fi
 
 # Auto suggestions (for Oh My Zsh)
 # Check if zsh-autosuggestions is installed; install if not
-if [[ -d "/Users/$(whoami)/.oh-my-zsh/plugins/zsh-autosuggestions" ]];
+if [[ -d "/Users/$(whoami)/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]];
 then
 	echo "zsh-autosuggestions is already installed!";
 else
