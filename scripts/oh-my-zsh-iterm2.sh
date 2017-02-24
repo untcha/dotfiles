@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILE_STRING="[dotfile] ";
+DOTFILE_STRING="[.dotfiles/scripts/oh-my-zsh-iterm2.sh] ";
 WRENCH_EMOJI=$'\xF0\x9F\x94\xA7';
 OK_EMOJI=$'\xE2\x9C\x85';
 NOK_EMOJI=$'\xE2\x9B\x94';
