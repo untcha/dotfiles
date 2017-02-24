@@ -46,8 +46,14 @@ echo $DOTFILE_STRING $WRENCH_EMOJI ": Installing jenv...";
 brew update;
 brew install jenv;
 
+# Get installed JDK versions
+JDK7=$(ls /Library/Java/JavaVirtualMachines | grep jdk1.7);
+JDK8=$(ls /Library/Java/JavaVirtualMachines | grep jdk1.8);
 
-
+# Configure jenv
+jenv add /Library/Java/JavaVirtualMachines/${JDK7}/Contents/Home/;
+jenv add /Library/Java/JavaVirtualMachines/${JDK8}/Contents/Home/;
+jenv rehash
 
 
 
