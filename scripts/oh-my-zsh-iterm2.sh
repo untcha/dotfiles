@@ -85,7 +85,16 @@ fi
 # Clean up                                                                    #
 ###############################################################################
 
-
+# Check if .zshrc-custom exists, if yes clean up .zshrc and make .zshrc-custom default
+if [[ -e "/Users/$(whoami)/.zshrc-custom" ]];
+then
+	echo "Removing default .zshrc...";
+	rm ~/.zshrc;
+	echo "Replacing default .zshrc with .zshrc-custom...";
+	mv ~/.zshrc-custom ~/.zshrc;
+else
+	echo "Nothing to clean up!";
+fi
 
 
 
