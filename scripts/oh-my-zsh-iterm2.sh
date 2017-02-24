@@ -69,7 +69,17 @@ fi
 # Further tweaking.                                                           #
 ###############################################################################
 
-
+# Auto suggestions (for Oh My Zsh)
+# Check if zsh-autosuggestions is installed; install if not
+if [[ -d "/Users/$(whoami)/.oh-my-zsh/plugins/zsh-autosuggestions" ]];
+then
+	echo "zsh-autosuggestions is already installed!";
+else
+	echo "zsh-autosuggestions is NOT installed! Installing zsh-autosuggestions...";
+	echo "...";
+	git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions;
+	echo "zsh-autosuggestions is now installed!";
+fi
 
 
 
