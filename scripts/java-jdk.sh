@@ -50,9 +50,12 @@ brew install jenv;
 JDK7=$(ls /Library/Java/JavaVirtualMachines | grep jdk1.7);
 JDK8=$(ls /Library/Java/JavaVirtualMachines | grep jdk1.8);
 
+JDK7_PATH=$'/Library/Java/JavaVirtualMachines/'${JDK7}'/Contents/Home/'
+JDK8_PATH=$'/Library/Java/JavaVirtualMachines/'${JDK8}'/Contents/Home/'
+
 # Configure jenv
-jenv add /Library/Java/JavaVirtualMachines/${JDK7}/Contents/Home/;
-jenv add /Library/Java/JavaVirtualMachines/${JDK8}/Contents/Home/;
+jenv add $JDK7_PATH;
+jenv add $JDK8_PATH;
 jenv rehash
 
 
