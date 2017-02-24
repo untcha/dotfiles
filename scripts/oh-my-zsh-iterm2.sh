@@ -38,6 +38,7 @@ then
 	echo "Oh-My-Zsh is already installed!";
 else
 	echo "Oh-My-Zsh is NOT installed! Installing Oh-My-Zsh...";
-	echo ".........";
+	echo "...";
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
 	echo "Oh-My-Zsh is now installed!";
 fi
