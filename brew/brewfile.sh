@@ -8,7 +8,11 @@ install_brews() {
 	brew install fping
 	brew install git
 	brew install mas
+	brew install mplayer
+	brew install node
 	brew install prettyping
+	brew install python3
+	brew install speedtest_cli
 	brew install tree
 	brew install tvnamer
 	
