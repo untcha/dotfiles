@@ -37,3 +37,13 @@ else
 	brew cask install java;
 	echo $DOTFILE_STRING $OK_EMOJI ": Java 8 is now installed!";
 fi
+
+###############################################################################
+# Install and configure jenv                                                  #
+###############################################################################
+
+echo $DOTFILE_STRING $WRENCH_EMOJI ": Installing jenv...";
+brew update;
+brew install jenv;
+brew update && brew cleanup && brew doctor;
+echo $DOTFILE_STRING $OK_EMOJI ": jenv is now installed!";
