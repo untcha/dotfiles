@@ -32,7 +32,7 @@ then
 	echo $DOTFILE_STRING $OK_EMOJI ": Java 8 is already installed!";
 else
 	echo $DOTFILE_STRING $NOK_EMOJI ": Java 8 is NOT installed!";
-	echo $DOTFILE_STRING $WRENCH_EMOJI ": Installing Java 7...";
+	echo $DOTFILE_STRING $WRENCH_EMOJI ": Installing Java 8...";
 	brew update;
 	brew cask install java;
 	echo $DOTFILE_STRING $OK_EMOJI ": Java 8 is now installed!";
