@@ -50,3 +50,8 @@ cd ~/.dotfiles/scripts && ./oh-my-zsh-iterm2.sh
 ``` bash
 cd ~/.dotfiles/scripts && ./java-jdk.sh
 ```
+
+## Inspired by...
+[Mathias Bynens](https://mathiasbynens.be/) and his [dotfiles repository](https://mths.be/dotfiles)
+[Alberto Grespan](http://albertogrespan.com/) and his [dotfiles repository](https://github.com/albertogg/dotfiles)
+[Hannes Juutilainen](http://obsoletesysadmin.wordpress.com/) and his [dotfiles repository](https://github.com/hjuutilainen/dotfiles)
