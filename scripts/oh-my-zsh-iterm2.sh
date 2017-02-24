@@ -12,7 +12,7 @@ NOK_EMOJI=$'\xE2\x9B\x94';
 # Check if zsh is installed via homebrew; install if not
 if [[ -e "/usr/local/bin/zsh" ]];
 then
-	echo $DOTFILE_STRING $OK_EMOJI " :zsh is already installed via homebrew!";
+	echo $DOTFILE_STRING $OK_EMOJI ": zsh is already installed via homebrew!";
 else
 	echo "zsh is NOT installed! Installing zsh via homebrew...";
 	brew install zsh;
