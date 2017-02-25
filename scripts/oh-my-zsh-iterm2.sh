@@ -84,15 +84,23 @@ else
 fi
 
 ###############################################################################
+# Generate and modify .zshrc from templace                                    #
+###############################################################################
+source ./generate_zshrc.sh
+
+generate_zshrc;
+modify_zshrc;
+
+###############################################################################
 # Clean up                                                                    #
 ###############################################################################
 
 # Check if .zshrc-custom exists, if yes clean up .zshrc and make .zshrc-custom default
-if [[ -e "$HOME/.zshrc-custom" ]]; then
-	echo "[$me]"$EMOJI_FIRE ": Removing default .zshrc...";
-	rm $HOME/.zshrc;
-	echo "[$me]"$EMOJI_WRENCH ": Replacing default .zshrc with .zshrc-custom...";
-	mv $HOME/.zshrc-custom $HOME/.zshrc;
-else
-	echo "[$me]"$EMOJI_OK ": Nothing to clean up!";
-fi
+#if [[ -e "$HOME/.zshrc-custom" ]]; then
+#	echo "[$me]"$EMOJI_FIRE ": Removing default .zshrc...";
+#	rm $HOME/.zshrc;
+#	echo "[$me]"$EMOJI_WRENCH ": Replacing default .zshrc with .zshrc-custom...";
+#	mv $HOME/.zshrc-custom $HOME/.zshrc;
+#else
+#	echo "[$me]"$EMOJI_OK ": Nothing to clean up!";
+#fi
