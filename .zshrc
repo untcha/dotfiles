@@ -13,7 +13,7 @@ export ZSH=/Users/untcha/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
-DEFAULT_USER="untcha"
+DEFAULT_USER="default_user_xxx"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
