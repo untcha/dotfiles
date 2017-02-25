@@ -15,9 +15,6 @@ EMOJI_QUESTION=$'\xE2\x9D\x93';
 
 me=$BASH_SOURCE;
 
-# Ask for the administrator password upfront
-sudo -v
-
 if [[ -e `which brew` ]]; then
 	echo "[$me]"$EMOJI_OK ": Homebrew is already installed.";
 else
