@@ -23,8 +23,9 @@ else
 	echo "[$me]"$EMOJI_OK ": Homebrew is now installed!";
 fi
 
-echo "[$me]"$EMOJI_WRENCH ": Updating Homebrew...";
-brew update;
+# removed because brewfile.sh and caskfile.sh run brew update
+# echo "[$me]"$EMOJI_WRENCH ": Updating Homebrew...";
+# brew update;
 
 read -p "[$me]"$EMOJI_QUESTION ": Would you like to install brews? [y/n]" -n 1;
 echo
