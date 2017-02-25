@@ -14,8 +14,13 @@ fi
 
 
 # Modify .zshrc DEFAULT_USER
+search_string_user="DEFAULT_USER=\"default_user\"";
+replace_string_user="DEFAULT_USER=\"$(whoami)\"";
 
-search_string1="DEFAULT_USER=\"default_user\"";
-replace_string1="DEFAULT_USER=\"$(whoami)\"";
+sed -i '' 's/'"$search_string_user"'/'"$replace_string_user"'/g' "$zshrc_destination";
 
-sed -i '' 's/'"$search_string1"'/'"$replace_string1"'/g' "$zshrc_destination";
+# Modify .zshrc installation path
+search_string_path="export ZSH\=\/Users\/default_user\/.oh-my-zsh";
+replace_string_path="export ZSH\=\/Users\/$(whoami)\/.oh-my-zsh";
+
+sed -i '' 's/'"$search_string_path"'/'"$replace_string_path"'/g' "$zshrc_destination";
