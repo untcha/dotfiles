@@ -6,6 +6,7 @@
 # ./brew/caskfile.sh
 ###############################################################################
 
+me=$BASH_SOURCE;
 source ./global_functions.sh
 
 if [[ -e `which brew` ]]; then
