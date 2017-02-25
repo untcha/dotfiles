@@ -88,8 +88,11 @@ fi
 ###############################################################################
 source ./generate_zshrc.sh
 
+echo "[$me]"$EMOJI_WRENCH ": Generating .zshrc...";
 generate_zshrc;
+echo "[$me]"$EMOJI_WRENCH ": Modifying .zshrc...";
 modify_zshrc;
+echo "[$me]"$EMOJI_OK ": All done!";
 
 ###############################################################################
 # Clean up                                                                    #
