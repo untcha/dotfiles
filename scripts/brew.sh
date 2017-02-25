@@ -12,6 +12,7 @@ source ./global_functions.sh
 if [[ -e `which brew` ]]; then
 	echo "[$me]"$EMOJI_OK ": Homebrew is already installed.";
 else
+	echo "[$me]"$EMOJI_NOK ": Homebrew is NOT installed!";
 	echo "[$me]"$EMOJI_WRENCH ": Installing Hombrew...";
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
 	echo "[$me]"$EMOJI_OK ": Homebrew is now installed!";
