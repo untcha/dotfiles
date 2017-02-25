@@ -1,40 +1,47 @@
 #!/bin/bash
 
-DOTFILE_STRING="[.dotfiles/scripts/brew.sh] ";
-WRENCH_EMOJI=$'\xF0\x9F\x94\xA7';
-SHELL_EMOJI=$'\xF0\x9F\x90\x9A';
-FIRE_EMOJI=$'\xF0\x9F\x94\xA5';
-OK_EMOJI=$'\xE2\x9C\x85';
-NOK_EMOJI=$'\xE2\x9B\x94';
+###############################################################################
+# This script installs homebrew and (optional) some brews and casks defined in
+# ./brew/brewfile.sh and
+# ./brew/caskfile.sh
+###############################################################################
 
-if [[ -e `which brew` ]];
-then
-	echo $DOTFILE_STRING $OK_EMOJI ": Hombrew is already installed.";
+EMOJI_OK=$'\xE2\x9C\x85';
+EMOJI_NOK=$'\xE2\x9B\x94';
+EMOJI_WRENCH=$'\xF0\x9F\x94\xA7';
+EMOJI_FIRE=$'\xF0\x9F\x94\xA5';
+EMOJI_SHELL=$'\xF0\x9F\x90\x9A';
+EMOJI_QUESTION=$'\xE2\x9D\x93';
+
+me=$BASH_SOURCE;
+
+if [[ -e `which brew` ]]; then
+	echo "[$me]"$EMOJI_OK ": Homebrew is already installed.";
 else
-	echo $DOTFILE_STRING $WRENCH_EMOJI ": Installing Hombrew...";
+	echo "[$me]"$EMOJI_WRENCH ": Installing Hombrew...";
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
-	echo $DOTFILE_STRING $OK_EMOJI ": Homebrew is now installed!";
+	echo "[$me]"$EMOJI_OK ": Homebrew is now installed!";
 fi
 
-echo $DOTFILE_STRING $WRENCH_EMOJI ": Updating Homebrew...";
+echo "[$me]"$EMOJI_WRENCH ": Updating Homebrew...";
 brew update;
 
-read -p "Would you like to install brews? [y/n]" -n 1;
+read -p "[$me]"$EMOJI_QUESTION ": Would you like to install brews? [y/n]" -n 1;
 echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
-	echo $DOTFILE_STRING $WRENCH_EMOJI ": Installing brews...";
+	echo "[$me]"$EMOJI_WRENCH ": Installing brews...";
 	source ../brew/brewfile.sh;
 	install_brews;
-	echo $DOTFILE_STRING $OK_EMOJI ": All brews are now installed!";
+	echo "[$me]"$EMOJI_OK ": All brews are now installed!";
 fi
 
-read -p "Would you like to install casks? [y/n]" -n 1;
+read -p "[$me]"$EMOJI_QUESTION ": Would you like to install casks? [y/n]" -n 1;
 echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
-	echo $DOTFILE_STRING $WRENCH_EMOJI ": Installing casks...";
+	echo "[$me]"$EMOJI_WRENCH ": Installing casks...";
 	source ../brew/caskfile.sh;
 	install_casks;
-	echo $DOTFILE_STRING $OK_EMOJI ": All casks now installed!";
+	echo "[$me]"$EMOJI_OK ": All casks now installed!";
 fi
