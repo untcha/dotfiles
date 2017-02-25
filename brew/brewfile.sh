@@ -13,6 +13,8 @@ install_brews() {
 	brew install prettyping
 	brew install python3
 	brew install speedtest_cli
+	brew install testssl
+	brew install tmate
 	brew install tree
 	brew install tvnamer
 	
