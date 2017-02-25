@@ -15,7 +15,7 @@ fi
 
 # Modify .zshrc DEFAULT_USER
 
-search_string1="default_user_xxx";
-replace_string1="untcha";
+search_string1="DEFAULT_USER=\"default_user\"";
+replace_string1="DEFAULT_USER=\"untcha\"";
 
 sed -i '' 's/'"$searchstring1"'/'"$replacestring1"'/g' "$zshrc_destination";
