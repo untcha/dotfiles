@@ -15,6 +15,9 @@ EMOJI_QUESTION=$'\xE2\x9D\x93';
 
 me=$BASH_SOURCE;
 
+# Ask for the administrator password upfront
+sudo -v
+
 if [[ -e `which brew` ]]; then
 	echo "[$me]"$EMOJI_OK ": Homebrew is already installed.";
 else
@@ -27,7 +30,7 @@ fi
 # echo "[$me]"$EMOJI_WRENCH ": Updating Homebrew...";
 # brew update;
 
-read -p "[$me]"$EMOJI_QUESTION ": Would you like to install brews? [y/n]" -n 1;
+read -p "Would you like to install brews? [y/n]" -n 1;
 echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
@@ -37,7 +40,7 @@ then
 	echo "[$me]"$EMOJI_OK ": All brews are now installed!";
 fi
 
-read -p "[$me]"$EMOJI_QUESTION ": Would you like to install casks? [y/n]" -n 1;
+read -p "Would you like to install casks? [y/n]" -n 1;
 echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
