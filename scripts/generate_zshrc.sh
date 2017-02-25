@@ -11,3 +11,11 @@ if [ -f $zshrc_destination ]; then
 else
 	cat $zshrc_custom > $zshrc_destination;
 fi
+
+
+# Modify .zshrc
+
+
+
+
+#sed -i '' 's/'"$searchstring"'/'"$replacestring"'/g' "$filename";
