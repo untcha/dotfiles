@@ -7,7 +7,7 @@
 ###############################################################################
 
 me=$BASH_SOURCE;
-source global_functions.sh
+source /global_functions.sh
 
 if [[ -e `which brew` ]]; then
 	echo "[$me]"$EMOJI_OK ": Homebrew is already installed.";
