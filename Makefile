@@ -1,2 +1,2 @@
 testcommand:
-		scripts/brew
+		scripts/brew.sh
