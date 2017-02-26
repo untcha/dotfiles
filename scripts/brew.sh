@@ -10,7 +10,7 @@ me=$BASH_SOURCE;
 
 DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
-. "$DIR/global_functions.sh"
+source "$DIR/global_functions.sh"
 
 if [[ -e `which brew` ]]; then
 	echo "[$me]"$EMOJI_OK ": Homebrew is already installed.";
