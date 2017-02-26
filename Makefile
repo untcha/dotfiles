@@ -1,2 +1,2 @@
 brew:
-		scripts/brew.sh
+		scripts/brew
