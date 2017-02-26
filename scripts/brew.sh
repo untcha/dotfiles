@@ -30,7 +30,7 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
 	echo "[$me]"$EMOJI_WRENCH ": Installing brews...";
-	source "$DIR/brew/brewfile.sh";
+	source ./brew/brewfile.sh;
 	install_brews;
 	echo "[$me]"$EMOJI_OK ": All brews are now installed!";
 fi
@@ -40,7 +40,7 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
 	echo "[$me]"$EMOJI_WRENCH ": Installing casks...";
-	source "$DIR/brew/caskfile.sh";
+	source ./brew/caskfile.sh;
 	install_casks;
 	echo "[$me]"$EMOJI_OK ": All casks now installed!";
 fi
