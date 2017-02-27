@@ -8,3 +8,6 @@ install:    homebrew \
 # ./brew/caskfile.sh
 homebrew:
 			scripts/brew.sh
+
+shell:
+			scripts/oh-my-zsh-iterm2.sh
