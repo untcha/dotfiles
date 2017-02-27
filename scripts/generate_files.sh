@@ -1,7 +1,10 @@
 #!/bin/bash
 
 me=$BASH_SOURCE;
-source ./global_functions.sh
+
+DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
+source "$DIR/global_functions.sh";
 
 read -p "Would you like to generate the ssh config file? [y/n]" -n 1;
 echo

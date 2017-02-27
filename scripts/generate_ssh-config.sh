@@ -1,6 +1,10 @@
 #!/bin/bash
 
-source ./global_functions.sh;
+me=$BASH_SOURCE;
+
+DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
+source "$DIR/global_functions.sh";
 
 ssh_config_custom=$global_dotfiles_dir/ssh/config;		# custom ssh config source file
 ssh_config_destination=$HOME/.ssh/config				# destination for the custom ssh config file
