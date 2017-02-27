@@ -1,6 +1,10 @@
 #!/bin/bash
 
-source ./global_functions.sh;
+me=$BASH_SOURCE;
+
+DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
+source "$DIR/global_functions.sh";
 
 zshrc_custom=$global_dotfiles_dir/.zshrc;		# custom .zshrc source file
 zshrc_destination=$HOME/.zshrc					# destination for the custom .zshrc file
@@ -19,6 +23,6 @@ generate_zshrc() {
 modify_zshrc() {
 	search_string="CURRENT_USER";
 	replace_string="$(whoami)";
-	
+
 	sed -i '' 's/'"$search_string"'/'"$replace_string"'/g' "$zshrc_destination";
 }
