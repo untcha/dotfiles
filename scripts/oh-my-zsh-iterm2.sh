@@ -1,16 +1,17 @@
 #!/bin/bash
 
 ###############################################################################
-# This script installs homebrew and (optional) some brews and casks defined in
-# ./brew/brewfile.sh and
-# ./brew/caskfile.sh
+# This script installs zsh (via homebrew), Oh-My-Zsh and iTerm 2 (via cask)
 ###############################################################################
 
 me=$BASH_SOURCE;
-source ./global_functions.sh
+
+DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
+source "$DIR/global_functions.sh";
 
 ###############################################################################
-# Install zsh via homebrew and set as default shell                           #
+# Install zsh via homebrew and set zsh as default shell
 ###############################################################################
 
 # Check if zsh is installed via homebrew; install if not
@@ -35,7 +36,7 @@ else
 fi
 
 ###############################################################################
-# Install Oh-My-Zsh and iTerm2                                                #
+# Install Oh-My-Zsh and iTerm2
 ###############################################################################
 
 # Check if Oh-My-Zsh is installed; install if not
@@ -64,12 +65,12 @@ if [[ -e "$HOME/Library/Fonts/Meslo LG M DZ Regular for Powerline.otf" ]]; then
 else
 	echo "[$me]"$EMOJI_NOK ": Font 'Meslo LG M DZ Regular for Powerline' is NOT installed!";
 	echo "[$me]"$EMOJI_WRENCH ": Installing 'Meslo LG M DZ Regular for Powerline'...";
-	cp ../iTerm2/Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline.otf $HOME/Library/Fonts;
+	cp ./iTerm2/Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline.otf $HOME/Library/Fonts;
 	echo "[$me]"$EMOJI_OK ": Font 'Meslo LG M DZ Regular for Powerline' is now installed!";
 fi
 
 ###############################################################################
-# Further tweaking                                                            #
+# Further tweaking
 ###############################################################################
 
 # Auto suggestions (for Oh My Zsh)
@@ -84,9 +85,9 @@ else
 fi
 
 ###############################################################################
-# Generate and modify .zshrc from templace                                    #
+# Generate and modify .zshrc from templace
 ###############################################################################
-source ./generate_zshrc.sh
+source "$DIR/generate_zshrc.sh";
 
 echo "[$me]"$EMOJI_WRENCH ": Generating .zshrc...";
 generate_zshrc;
