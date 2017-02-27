@@ -7,4 +7,4 @@ install:    homebrew \
 # ./brew/brewfile.sh and
 # ./brew/caskfile.sh
 homebrew:
-    scripts/brew.sh
+            scripts/brew.sh
