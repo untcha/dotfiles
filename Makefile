@@ -1,8 +1,7 @@
-all:
-    install
+all: install
 
-install:
-    homebrew
+install:    homebrew \
+            shell \
 
 # This target installs homebrew and (optional) some brews and casks defined in
 # ./brew/brewfile.sh and
