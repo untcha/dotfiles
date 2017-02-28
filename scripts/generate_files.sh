@@ -11,7 +11,7 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
 	echo "[$me]"$EMOJI_WRENCH ": Generating ssh-config...";
-	source ./generate_ssh-config.sh
+	source ./generate_ssh.sh
 	generate_ssh_config;
 fi
 
