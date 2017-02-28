@@ -1,5 +1,11 @@
 #!/bin/bash
 
+###############################################################################
+# This script generates the following files:
+# - .ssh/config (template: .ssh.config)
+# - .zshrc (modify for the current user)
+###############################################################################
+
 me=$BASH_SOURCE;
 
 DIR="${BASH_SOURCE%/*}"
@@ -10,7 +16,7 @@ read -p "Would you like to generate the ssh config file? [y/n]" -n 1;
 echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
-	echo "[$me]"$EMOJI_WRENCH ": Generating ssh-config...";
+	echo "[$me]"$EMOJI_WRENCH ": Generating ssh config...";
 	source ./generate_ssh.sh
 	generate_ssh_config;
 fi

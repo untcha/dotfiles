@@ -1,5 +1,9 @@
 #!/bin/bash
 
+###############################################################################
+# This script generates the ssh config file from the .ssh.config template
+###############################################################################
+
 me=$BASH_SOURCE;
 
 DIR="${BASH_SOURCE%/*}"
