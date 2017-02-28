@@ -9,5 +9,6 @@ install:    homebrew \
 homebrew:
 			scripts/brew.sh
 
+# This target installs zsh (via homebrew), Oh-My-Zsh and iTerm 2 (via cask)
 shell:
 			scripts/shell.sh
