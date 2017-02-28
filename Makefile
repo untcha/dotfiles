@@ -10,4 +10,4 @@ homebrew:
 			scripts/brew.sh
 
 shell:
-			scripts/oh-my-zsh-iterm2.sh
+			scripts/shell.sh
