@@ -65,7 +65,7 @@ if [[ -e "$HOME/Library/Fonts/Meslo.otf" ]]; then
 else
 	echo "[$me]"$EMOJI_NOK ": Font 'Meslo LG M DZ Regular for Powerline' is NOT installed!";
 	echo "[$me]"$EMOJI_WRENCH ": Installing 'Meslo LG M DZ Regular for Powerline'...";
-	cp ./iTerm2/Meslo.otf $HOME/Library/Fonts;
+	cp ./bin/iterm2/Meslo.otf $HOME/Library/Fonts;
 	echo "[$me]"$EMOJI_OK ": Font 'Meslo LG M DZ Regular for Powerline' is now installed!";
 fi
 
