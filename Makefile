@@ -16,4 +16,4 @@ shell:
 
 # This target generates the ssh config file from the .ssh.config template
 ssh-config:
-			scripts/generate_ssh.sh
+			source scripts/generate_ssh.sh && generate_ssh_config
