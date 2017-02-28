@@ -21,10 +21,6 @@ else
 	echo "[$me]"$EMOJI_OK ": Homebrew is now installed!";
 fi
 
-# removed because brewfile.sh and caskfile.sh run brew update
-# echo "[$me]"$EMOJI_WRENCH ": Updating Homebrew...";
-# brew update;
-
 read -p "Would you like to install brews? [y/n]" -n 1;
 echo
 if [[ $REPLY =~ ^[Yy]$ ]];
