@@ -60,12 +60,12 @@ else
 fi
 
 # Check if font "Meslo" is installed; install (copy from iTerm2 directory) if not
-if [[ -e "$HOME/Library/Fonts/Meslo LG M DZ Regular for Powerline.otf" ]]; then
+if [[ -e "$HOME/Library/Fonts/Meslo.otf" ]]; then
 	echo "[$me]"$EMOJI_OK ": Font 'Meslo LG M DZ Regular for Powerline' is already installed!";
 else
 	echo "[$me]"$EMOJI_NOK ": Font 'Meslo LG M DZ Regular for Powerline' is NOT installed!";
 	echo "[$me]"$EMOJI_WRENCH ": Installing 'Meslo LG M DZ Regular for Powerline'...";
-	cp ./iTerm2/Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline.otf $HOME/Library/Fonts;
+	cp ./iTerm2/Meslo.otf $HOME/Library/Fonts;
 	echo "[$me]"$EMOJI_OK ": Font 'Meslo LG M DZ Regular for Powerline' is now installed!";
 fi
 
@@ -85,7 +85,7 @@ else
 fi
 
 ###############################################################################
-# Generate and modify .zshrc from templace
+# Generate and modify .zshrc from template
 ###############################################################################
 source "$DIR/generate_zshrc.sh";
 
