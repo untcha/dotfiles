@@ -42,9 +42,6 @@ fi
 ###############################################################################
 # Install and configure jenv
 ###############################################################################
-
-exec zsh
-
 echo "[$me]"$EMOJI_WRENCH ": Installing jenv...";
 brew update;
 brew install jenv;
