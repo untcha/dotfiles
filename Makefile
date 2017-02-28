@@ -1,7 +1,8 @@
 all: install
 
 install:    homebrew \
-            shell \
+			shell \
+			ssh \
 
 # This target installs homebrew and (optional) some brews and casks defined in
 # ./brew/brewfile.sh and
@@ -12,3 +13,7 @@ homebrew:
 # This target installs zsh (via homebrew), Oh-My-Zsh and iTerm 2 (via cask)
 shell:
 			scripts/shell.sh
+
+# This target generates the ssh config file from the .ssh.config template
+ssh-config:
+			scripts/generate_ssh.sh
