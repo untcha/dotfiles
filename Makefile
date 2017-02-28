@@ -15,7 +15,7 @@ homebrew:
 shell:
 			scripts/shell.sh
 
-# This script installs Java JDK 7 and Java JDK 8 (via cask),
+# This target installs Java JDK 7 and Java JDK 8 (via cask),
 # jenv (via homebrew) and configures jenv
 java:
 			scripts/java.sh
