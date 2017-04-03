@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+def hi(name)
+  puts "Hello #{name}"
+  puts $0
+end
+
+hi(__FILE__)
+
+
