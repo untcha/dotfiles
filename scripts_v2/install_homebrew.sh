@@ -29,8 +29,8 @@ read -p $'\e[36mWould you like to install brew packages?\e[0m [\e[32my\e[0m/\e[3
 echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
-	echo "Installing brew packages...";
+	echo -e "${YELLOW}Installing brew packages...${NC}";
 	source ./brewfile.sh
 	install_brew_packages;
-	echo "All brew packages are now installed";
+	echo "${YELLOW}All brew packages are now installed!${NC}";
 fi
