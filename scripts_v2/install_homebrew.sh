@@ -32,5 +32,5 @@ then
 	echo -e "${YELLOW}Installing brew packages...${NC}";
 	source ./brewfile.sh
 	install_brew_packages;
-	echo "${YELLOW}All brew packages are now installed!${NC}";
+	echo -e "${YELLOW}All brew packages are now installed!${NC}";
 fi
