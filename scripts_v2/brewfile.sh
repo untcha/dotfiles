@@ -17,11 +17,11 @@ RED='\033[0;31m'
 YELLOW='\033[0;33m'
 
 packages=('clamav'
+	  'displayplacer'
 	  'git'
 	  'jenv'
 	  'mas'
 	  'mpssh'
-	  'screenresolution'
 	  'topgrade'
 	  'wget'
 	  'zsh')
@@ -30,6 +30,10 @@ packages=('clamav'
 install_brew_packages() {
 	# Update brew
 	brew update
+
+	# Install taps
+	# Prerequisite for displayplacer
+	brew tap jakehilborn/jakehilborn
 
 	# Install packages
 	for i in ${!packages[@]}; do
