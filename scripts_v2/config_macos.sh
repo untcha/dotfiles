@@ -54,7 +54,17 @@ defaults write com.apple.dock show-recents -int 0
 defaults write com.apple.spaces spans-displays -int 1
 
 ###############################################################################
-# System Preferences/                                                         #
+# System Preferences/Siri                                                     #
+###############################################################################
+
+# Set "Enable Ask Siri" to true (1)
+defaults write com.apple.assistant.support "Assistant Enabled" -int 1
+
+# Set "Show Siri in menu bar" to true (1)
+defaults write com.apple.Siri StatusMenuVisible -int 1
+
+###############################################################################
+# System Preferences/Displays                                                 #
 ###############################################################################
 
 #scutil --get LocalHostName
