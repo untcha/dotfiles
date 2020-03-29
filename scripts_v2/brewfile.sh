@@ -8,6 +8,7 @@
 #Purple       0;35     Light Purple  1;35
 #Cyan         0;36     Light Cyan    1;36
 #Light Gray   0;37     White         1;37
+#printf "I ${RED}love${NC} Stack Overflow\n"
 
 GREEN='\033[0;32m'
 RED='\033[0;31m'
