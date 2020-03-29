@@ -23,6 +23,7 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
 	echo "Installing brew packages...";
-
+	source ./brewfile.sh
+	install_brew_packages;
 	echo "All brew packages are now installed";
 fi
