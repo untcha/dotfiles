@@ -25,6 +25,7 @@ else
 fi
 
 #read -p "Would you like to install brews? [y/n] " -n 1;
+#read -p "$(echo -e $BOLD$YELLOW"foo bar "$RESET)" INPUT_VARIABLE
 read -p $'\e[36mWould you like to install brew packages?\e[0m [\e[32my\e[0m/\e[31mn\e[0m]: ' -n 1;
 echo
 if [[ $REPLY =~ ^[Yy]$ ]];
