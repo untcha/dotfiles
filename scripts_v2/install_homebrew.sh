@@ -24,7 +24,7 @@ else
 	echo -e "${CYAN}Homebrew is now installed!${NC}";
 fi
 
-read -p "${CYAN}Would you like to install brews? [y/n] " -n 1;
+read -p -e "${CYAN}Would you like to install brews? [y/n] " -n 1;
 echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
