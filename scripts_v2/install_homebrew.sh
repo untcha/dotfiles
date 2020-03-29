@@ -14,7 +14,7 @@ if [[ -e `which brew` ]]; then
 else
 	echo "Homebrew is NOT installed!";
 	echo "Installing Homebrew...";
-	echo "do do do...";
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	echo "Homebrew is now installed!";
 fi
 
