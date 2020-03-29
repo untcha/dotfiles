@@ -17,3 +17,12 @@ else
 	echo "do do do...";
 	echo "Homebrew is now installed!";
 fi
+
+read -p "Would you like to install brews? [y/n] " -n 1;
+echo
+if [[ $REPLY =~ ^[Yy]$ ]];
+then
+	echo "Installing brew packages...";
+
+	echo "All brew packages are now installed";
+fi
