@@ -60,8 +60,27 @@ defaults write com.apple.spaces spans-displays -int 1
 # Set "Enable Ask Siri" to true (1)
 defaults write com.apple.assistant.support "Assistant Enabled" -int 1
 
+# Set "Keyboard Shortcut" to "Hold Command Space"
+defaults write com.apple.Siri HotkeyTag -int 2
+
 # Set "Show Siri in menu bar" to true (1)
 defaults write com.apple.Siri StatusMenuVisible -int 1
+
+###############################################################################
+# System Preferences/Language & Region                                        #
+###############################################################################
+
+# Set "Preferred languages" to "en-US" (primary) and "de-DE"
+defaults write NSGlobalDomain AppleLanguages -array "en-US" "de-DE"
+
+# Set "Region" to "Germany" (@currency=EUR)
+defaults write NSGlobalDomain AppleLocale -string "en_DE"
+
+# Locale for zsh will be set in .zshrc
+
+# Set "Measurement units" to "Centimeters" (Metric)
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+defaults write NSGlobalDomain AppleMetricUnits -int 1
 
 ###############################################################################
 # System Preferences/Displays                                                 #
