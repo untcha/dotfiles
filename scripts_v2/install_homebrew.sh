@@ -18,13 +18,13 @@ if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
 if [[ -e `which brew` ]]; then
 	echo -e "${CYAN}Homebrew is already installed!${NC}";
 else
-	echo -e "${YELLOW}Homebrew is not installed!${NC}";
-	echo -e "Installing Homebrew...";
+	echo -e "${CYAN}Homebrew is not installed!${NC}";
+	echo -e "${CYAN}Installing Homebrew...${NC}";
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-	echo "Homebrew is now installed!";
+	echo -e "${CYAN}Homebrew is now installed!${NC}";
 fi
 
-read -p "Would you like to install brews? [y/n] " -n 1;
+read -p "${CYAN}Would you like to install brews? [y/n] " -n 1;
 echo
 if [[ $REPLY =~ ^[Yy]$ ]];
 then
