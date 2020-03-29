@@ -13,10 +13,16 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 # General                                                                     #
 ###############################################################################
+# open -a TextEdit filename
 
-# Set appearance to dark
+# Set "Appearance" to dark
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 
+# TODO: Set default web browser
+# TODO: cask and install Google Chrome
+
+# Set "Ask to keep changes when closing documents" to true
+defaults write NSGlobalDomain NSCloseAlwaysConfirmsChanges -int 1
 
 
 ###############################################################################
