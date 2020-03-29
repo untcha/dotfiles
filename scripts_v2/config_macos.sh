@@ -34,3 +34,15 @@ color_depth=$(displayplacer list | grep 'Color Depth:' | awk '{print $3}')
 
 # Set screen resolution with displayplacer
 displayplacer "id:$persistent_screen_id res:$resolution color_depth:$color_depth scaling:on origin:(0,0) degree:0"
+
+###############################################################################
+# Kill affected applications                                                  #
+###############################################################################
+
+for app in "Activity Monitor" \
+    "cfprefsd" \
+    "Dock" \
+    "Finder" \
+    "SystemUIServer"; do
+    killall "${app}" &> /dev/null
+done
