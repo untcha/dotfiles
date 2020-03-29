@@ -10,9 +10,11 @@
 #Light Gray   0;37     White         1;37
 #printf "I ${RED}love${NC} Stack Overflow\n"
 
+
 GREEN='\033[0;32m'
-RED='\033[0;31m'
 NC='\033[0m'
+RED='\033[0;31m'
+YELLOW='\033[0;33m'
 
 packages=('clamav'
 	  'git'
@@ -39,9 +41,9 @@ install_brew_packages() {
 			echo -e "--> ${GREEN}${packages[$i]}${NC}" "is already installed!";
 		else
 			echo -e "--> ${RED}${packages[$i]}${NC}" "is not installed!";
-			echo -e "    installing ${RED}${packages[$i]}${NC}";
+			echo -e "    Installing ${RED}${packages[$i]}${NC}";
 			brew install ${packages[$i]};
-			echo -e "    successfully installed ${GREEN}${packages[$i]}${NC}";
+			echo -e "    Successfully installed ${GREEN}${packages[$i]}${NC}";
 		fi
 	done
 }
