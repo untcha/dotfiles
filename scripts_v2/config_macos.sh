@@ -21,9 +21,30 @@ defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 # TODO: Set default web browser
 # TODO: cask and install Google Chrome
 
-# Set "Ask to keep changes when closing documents" to true
+# Set "Ask to keep changes when closing documents" to true (1)
 defaults write NSGlobalDomain NSCloseAlwaysConfirmsChanges -int 1
 
+###############################################################################
+# Desktop & Screensaver                                                       #
+###############################################################################
+
+# TODO: try to get and set current wallpaper from dropbox
+
+###############################################################################
+# Dock                                                                        #
+###############################################################################
+
+# Set "Size" to 36
+defaults write com.apple.dock tilesize -int 36
+
+# Set "Minimise windows into applications icon" to true (1)
+defaults write com.apple.dock minimize-to-application -int 1
+
+# Set "Animate opening applications" to false (0)
+defaults write com.apple.dock launchanim -int 0
+
+# Set "Show recent applications in Dock" to false (0)
+defaults write com.apple.dock show-recents -int 0
 
 ###############################################################################
 # Screen                                                                      #
