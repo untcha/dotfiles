@@ -11,7 +11,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
-# General                                                                     #
+# System Preferences/General                                                  #
 ###############################################################################
 # open -a TextEdit filename
 
@@ -25,13 +25,13 @@ defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 defaults write NSGlobalDomain NSCloseAlwaysConfirmsChanges -int 1
 
 ###############################################################################
-# Desktop & Screensaver                                                       #
+# System Preferences/Desktop & Screensaver                                    #
 ###############################################################################
 
 # TODO: try to get and set current wallpaper from dropbox
 
 ###############################################################################
-# Dock                                                                        #
+# System Preferences/Dock                                                     #
 ###############################################################################
 
 # Set "Size" to 36
@@ -47,7 +47,14 @@ defaults write com.apple.dock launchanim -int 0
 defaults write com.apple.dock show-recents -int 0
 
 ###############################################################################
-# Screen                                                                      #
+# System Preferences/Mission Control                                          #
+###############################################################################
+
+# Set "Displays have separate Spaces" to true (1)
+defaults write com.apple.spaces spans-displays -int 1
+
+###############################################################################
+# System Preferences/                                                         #
 ###############################################################################
 
 #scutil --get LocalHostName
