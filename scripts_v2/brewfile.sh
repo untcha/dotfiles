@@ -30,6 +30,7 @@ install_brew_packages() {
 		else
 			echo -e "--> ${RED}${packages[$i]}${NC}" "is not installed!";
 			echo -e "    installing ${RED}${packages[$i]}${NC}";
+			brew install ${packages[$i]};
 			echo -e "    successfully installed ${GREEN}${packages[$i]}${NC}";
 		fi
 	done
