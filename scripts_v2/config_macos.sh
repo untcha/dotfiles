@@ -108,7 +108,14 @@ defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationc
 #defaults write com.apple.screensaver askForPassword -int 1
 #defaults write com.apple.screensaver askForPasswordDelay -int 0
 #profiles -I -F ./askforpassworddelay.mobileconfig
-# --> Set manually!
+# --> Set manually! TODO Documentation!
+
+###############################################################################
+# System Preferences/Security & Privacy                                       #
+###############################################################################
+
+# Set "Show Bluetooth in menu bar" to true (1)
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -int 1
 
 ###############################################################################
 # System Preferences/Displays                                                 #
