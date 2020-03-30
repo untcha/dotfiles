@@ -135,6 +135,12 @@ defaults write com.apple.systemuiserver menuExtras '
 # Show Battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
+# Configure Clock settings
+defaults write com.apple.menuextra.clock DateFormat -string "HH:mm:ss"
+
+# Set the timezone; see `sudo systemsetup -listtimezones` for other values
+sudo systemsetup -settimezone "Europe/Berlin" > /dev/null
+
 killall SystemUIServer
 
 ###############################################################################
