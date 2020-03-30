@@ -111,6 +111,22 @@ defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationc
 # --> Set manually! TODO Documentation!
 
 ###############################################################################
+# System Preferences/Displays                                                 #
+###############################################################################
+
+#scutil --get LocalHostName
+resolution="1680x1050"
+
+# Get the persistent screen id
+persistent_screen_id=$(displayplacer list | grep 'Persistent screen id:' | awk '{print $4}')
+
+# Get color depth value
+color_depth=$(displayplacer list | grep 'Color Depth:' | awk '{print $3}')
+
+# Set screen resolution with displayplacer
+displayplacer "id:$persistent_screen_id res:$resolution color_depth:$color_depth scaling:on origin:(0,0) degree:0"
+
+###############################################################################
 # Menu bar / Clock / Timezone                                                 #
 ###############################################################################
 
@@ -140,22 +156,6 @@ defaults write com.apple.menuextra.clock DateFormat -string "HH:mm:ss"
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Europe/Berlin" > /dev/null
-
-###############################################################################
-# System Preferences/Displays                                                 #
-###############################################################################
-
-#scutil --get LocalHostName
-resolution="1680x1050"
-
-# Get the persistent screen id
-persistent_screen_id=$(displayplacer list | grep 'Persistent screen id:' | awk '{print $4}')
-
-# Get color depth value
-color_depth=$(displayplacer list | grep 'Color Depth:' | awk '{print $3}')
-
-# Set screen resolution with displayplacer
-displayplacer "id:$persistent_screen_id res:$resolution color_depth:$color_depth scaling:on origin:(0,0) degree:0"
 
 ###############################################################################
 # Kill affected applications                                                  #
