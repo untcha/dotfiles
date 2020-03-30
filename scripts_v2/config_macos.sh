@@ -86,15 +86,15 @@ defaults write NSGlobalDomain AppleMetricUnits -int 1
 # System Preferences/Notifications                                            #
 ###############################################################################
 
-defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationceterui dndEnabledDisplayLock -int 1
+defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui dndEnabledDisplayLock -int 1
 
-defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationceterui dndEnabledDisplaySleep -int 1
+defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui dndEnabledDisplaySleep -int 1
 
-defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationceterui dndStart -integer 1380
+defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui dndStart -int 1380
 
-defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationceterui dndEnd -int 480
+defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui dndEnd -int 480
 
-defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationceterui doNotDisturb -int 0
+defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturb -int 0
 killall NotificationCenter
 
 ###############################################################################
