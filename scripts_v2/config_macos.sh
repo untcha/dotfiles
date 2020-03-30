@@ -111,7 +111,7 @@ defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationc
 # --> Set manually! TODO Documentation!
 
 ###############################################################################
-#                                        #
+# Menu bar / Clock / Timezone                                                 #
 ###############################################################################
 
 # Show menu bar icons
@@ -140,8 +140,6 @@ defaults write com.apple.menuextra.clock DateFormat -string "HH:mm:ss"
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Europe/Berlin" > /dev/null
-
-killall SystemUIServer
 
 ###############################################################################
 # System Preferences/Displays                                                 #
