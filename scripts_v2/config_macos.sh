@@ -116,7 +116,7 @@ defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationc
 
 defaults write com.apple.HIToolbox AppleCurrentKeyboardLayoutInputSourceID -string "com.apple.keylayout.German"
 
-defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '
+defaults write com.apple.HIToolbox AppleEnabledInputSources -array '
 <dict>
 <key>InputSourceKind</key>
 <string>Keyboard Layout</string>
@@ -126,7 +126,7 @@ defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '
 <string>German</string>
 </dict>'
 
-defaults write com.apple.HIToolbox AppleInputSourceHistory -array-add '
+defaults write com.apple.HIToolbox AppleInputSourceHistory -array '
 <dict>
 <key>InputSourceKind</key>
 <string>Keyboard Layout</string>
@@ -136,7 +136,7 @@ defaults write com.apple.HIToolbox AppleInputSourceHistory -array-add '
 <string>German</string>
 </dict>'
 
-defaults write com.apple.HIToolbox AppleSelectedInputSources -array-add '
+defaults write com.apple.HIToolbox AppleSelectedInputSources -array '
 <dict>
 <key>InputSourceKind</key>
 <string>Keyboard Layout</string>
