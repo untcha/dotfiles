@@ -122,6 +122,20 @@ defaults write com.apple.HIToolbox AppleEnabledInputSources '
     "KeyboardLayout Name" = German;
 )'
 
+defaults write com.apple.HIToolbox AppleInputSourceHistory '
+(
+    InputSourceKind = "Keyboard Layout";
+    "KeyboardLayout ID" = 3;
+    "KeyboardLayout Name" = German;
+)'
+
+defaults write com.apple.HIToolbox AppleSelectedInputSources '
+(
+    InputSourceKind = "Keyboard Layout";
+    "KeyboardLayout ID" = 3;
+    "KeyboardLayout Name" = German;
+)'
+
 ###############################################################################
 # System Preferences/Displays                                                 #
 ###############################################################################
