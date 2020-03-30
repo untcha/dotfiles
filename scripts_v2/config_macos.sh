@@ -107,7 +107,8 @@ defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationc
 
 #defaults write com.apple.screensaver askForPassword -int 1
 #defaults write com.apple.screensaver askForPasswordDelay -int 0
-profiles -I -F ./askforpassworddelay.mobileconfig
+#profiles -I -F ./askforpassworddelay.mobileconfig
+# --> Set manually!
 
 ###############################################################################
 # System Preferences/Displays                                                 #
