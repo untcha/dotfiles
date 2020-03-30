@@ -90,7 +90,7 @@ defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationc
 
 defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationceterui dndEnabledDisplaySleep -int 1
 
-defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationceterui dndStart -int 1380
+defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationceterui dndStart -integer 1380
 
 defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationceterui dndEnd -int 480
 
