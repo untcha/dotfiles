@@ -95,6 +95,7 @@ defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationc
 defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationceterui dndEnd -int 480
 
 defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationceterui doNotDisturb -int 0
+killall NotificationCenter
 
 ###############################################################################
 # System Preferences/Displays                                                 #
