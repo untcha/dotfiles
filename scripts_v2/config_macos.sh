@@ -120,6 +120,7 @@ for app in "Activity Monitor" \
     "cfprefsd" \
     "Dock" \
     "Finder" \
+    "NotificationCenter" \
     "SystemUIServer"; do
     killall "${app}" &> /dev/null
 done
