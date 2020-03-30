@@ -102,6 +102,13 @@ defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationc
 # defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturb -int 0
 
 ###############################################################################
+# System Preferences/Security & Privacy                                       #
+###############################################################################
+
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver aksForPasswordDelay -int 0
+
+###############################################################################
 # System Preferences/Displays                                                 #
 ###############################################################################
 
