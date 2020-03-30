@@ -147,6 +147,14 @@ defaults write com.apple.HIToolbox AppleSelectedInputSources -array '
 </dict>'
 
 ###############################################################################
+# System Preferences/Trackpad                                                 #
+###############################################################################
+
+# Set "Tap to click" to true (1)
+defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
+
+
+###############################################################################
 # System Preferences/Displays                                                 #
 ###############################################################################
 
