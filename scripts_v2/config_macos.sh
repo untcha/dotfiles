@@ -99,9 +99,7 @@ defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationc
 # Set end value for scheduled DND (calc example: 15:00 --> 15 * 60 + 0 = 900; 18:30 --> 18 * 60 + 30 = 1110)
 defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui dndEnd -int 480
 
-# ?
-defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturb -int 1
-killall NotificationCenter
+# defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturb -int 0
 
 ###############################################################################
 # System Preferences/Displays                                                 #
