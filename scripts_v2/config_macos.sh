@@ -118,7 +118,7 @@ defaults write com.apple.HIToolbox AppleCurrentKeyboardLayoutInputSourceID -stri
 defaults write com.apple.HIToolbox AppleEnabledInputSources '
 (
     InputSourceKind = Keyboard Layout;
-    KeyboardLayout ID"' = 3;
+    KeyboardLayout ID = 3;
     KeyboardLayout Name = German;
 )'
 
