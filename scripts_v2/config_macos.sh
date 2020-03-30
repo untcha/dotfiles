@@ -106,7 +106,7 @@ defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationc
 ###############################################################################
 
 defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver aksForPasswordDelay -int 0
+defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 ###############################################################################
 # System Preferences/Displays                                                 #
