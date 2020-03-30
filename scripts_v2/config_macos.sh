@@ -115,26 +115,36 @@ defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationc
 ###############################################################################
 
 defaults write com.apple.HIToolbox AppleCurrentKeyboardLayoutInputSourceID -string "com.apple.keylayout.German"
-defaults write com.apple.HIToolbox AppleEnabledInputSources '
-(
-    InputSourceKind = Keyboard Layout;
-    KeyboardLayout ID = 3;
-    KeyboardLayout Name = German;
-)'
 
-defaults write com.apple.HIToolbox AppleInputSourceHistory '
-(
-    InputSourceKind = "Keyboard Layout";
-    "KeyboardLayout ID" = 3;
-    "KeyboardLayout Name" = German;
-)'
+defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '
+<dict>
+<key>InputSourceKind</key>
+<string>Keyboard Layout</string>
+<key>KeyboardLayout ID</key>
+<integer>3</integer>
+<key>KeyboardLayout Name</key>
+<string>German</string>
+</dict>'
 
-defaults write com.apple.HIToolbox AppleSelectedInputSources '
-(
-    InputSourceKind = "Keyboard Layout";
-    "KeyboardLayout ID" = 3;
-    "KeyboardLayout Name" = German;
-)'
+defaults write com.apple.HIToolbox AppleInputSourceHistory -array-add '
+<dict>
+<key>InputSourceKind</key>
+<string>Keyboard Layout</string>
+<key>KeyboardLayout ID</key>
+<integer>3</integer>
+<key>KeyboardLayout Name</key>
+<string>German</string>
+</dict>'
+
+defaults write com.apple.HIToolbox AppleSelectedInputSources -array-add '
+<dict>
+<key>InputSourceKind</key>
+<string>Keyboard Layout</string>
+<key>KeyboardLayout ID</key>
+<integer>3</integer>
+<key>KeyboardLayout Name</key>
+<string>German</string>
+</dict>'
 
 ###############################################################################
 # System Preferences/Displays                                                 #
