@@ -111,6 +111,18 @@ defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationc
 # --> Set manually! TODO Documentation!
 
 ###############################################################################
+# System Preferences/Keyboard                                                 #
+###############################################################################
+
+defaults write com.apple.HIToolbox AppleCurrentKeyboardLayoutInputSourceID -string "com.apple.keylayout.German"
+defaults write com.apple.HIToolbox AppleEnabledInputSources '
+(
+    InputSourceKind = "Keyboard Layout";
+    "KeyboardLayout ID" = 3;
+    "KeyboardLayout Name" = German;
+)'
+
+###############################################################################
 # System Preferences/Displays                                                 #
 ###############################################################################
 
