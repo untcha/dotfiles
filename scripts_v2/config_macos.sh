@@ -122,12 +122,12 @@ defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextr
 defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.clock" -int 1
 defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -int 1
 
-defaults write com.apple.systemuiserver menuExtras -array 
-"/System/Library/CoreServices/Menu Extras/AirPort.menu"
-"/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
-"/System/Library/CoreServices/Menu Extras/Clock.menu" 
-"/System/Library/CoreServices/Menu Extras/Displays.menu"
-"/System/Library/CoreServices/Menu Extras/Volume.menu"
+defaults write com.apple.systemuiserver menuExtras -array \ 
+	'"/System/Library/CoreServices/Menu Extras/AirPort.menu"' \
+	'"/System/Library/CoreServices/Menu Extras/Bluetooth.menu"' \
+	'"/System/Library/CoreServices/Menu Extras/Clock.menu"' \
+	'"/System/Library/CoreServices/Menu Extras/Displays.menu"' \
+	'"/System/Library/CoreServices/Menu Extras/Volume.menu"'
 
 killall SystemUIServer
 
