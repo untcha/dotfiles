@@ -180,10 +180,14 @@ displayplacer "id:$persistent_screen_id res:$resolution color_depth:$color_depth
 # System Preferences/Sharing                                                  #
 ###############################################################################
 
+# Set the primary hostname of your mac. Fully qualified hostname, e.g. for mymac.domain.com
 sudo scutil --set ComputerName "rMBP13-2015"
-sudo scutil --set HostName "rMBP13-2015"
-sudo scutil --set LocalHostName "rMBP13-2015"
 
+# Set the Bonjour hostname of your mac. The name usable on the network, e.g. for mymac.local
+sudo scutil --set HostName "rMBP13-2015"
+
+# Set the computer name. The user-friendly computer name you see in Finder, e.g. myMac
+sudo scutil --set LocalHostName "rMBP13-2015"
 
 ###############################################################################
 # Menu bar / Clock / Timezone                                                 #
