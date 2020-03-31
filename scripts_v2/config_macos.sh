@@ -156,9 +156,9 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 #defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-#defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
-#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
-#defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerDragGesture -int 1
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerDragGesture -int 1
 
 #defaults -currentHost write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -int 1
 #defaults -currentHost write com.apple.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -int 1
