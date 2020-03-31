@@ -160,12 +160,6 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool t
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerDragGesture -int 1
 
-#defaults -currentHost write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -int 1
-#defaults -currentHost write com.apple.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -int 1
-
-#defaults write com.apple.AppleMultitouchTrackpad Dragging -bool true
-#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -bool true
-
 ###############################################################################
 # System Preferences/Displays                                                 #
 ###############################################################################
@@ -181,6 +175,15 @@ color_depth=$(displayplacer list | grep 'Color Depth:' | awk '{print $3}')
 
 # Set screen resolution with displayplacer
 displayplacer "id:$persistent_screen_id res:$resolution color_depth:$color_depth scaling:on origin:(0,0) degree:0"
+
+###############################################################################
+# System Preferences/Sharing                                                  #
+###############################################################################
+
+sudo scutil --set ComputerName "rMBP13-2015"
+sudo scutil --set HostName "rMBP13-2015"
+sudo scutil --set LocalHostName "rMBP13-2015"
+
 
 ###############################################################################
 # Menu bar / Clock / Timezone                                                 #
