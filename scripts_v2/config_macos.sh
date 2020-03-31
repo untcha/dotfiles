@@ -160,6 +160,9 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeF
 defaults -currentHost write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -int 1
 defaults -currentHost write com.apple.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -int 1
 
+defaults write com.apple.AppleMultitouchTrackpad Dragging -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -bool true
+
 ###############################################################################
 # System Preferences/Displays                                                 #
 ###############################################################################
