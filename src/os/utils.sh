@@ -36,6 +36,10 @@ ask_for_sudo() {
 	
 }
 
+get_answer() {
+	printf "%s" "$REPLY"
+}
+
 print_error() {
 	print_in_red "   [✖] $1 $2\n"
 }
