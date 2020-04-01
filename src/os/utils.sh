@@ -1,3 +1,9 @@
 #!/bin/bash
 
-echo "DEBUG: utils.sh"
+test() {
+	
+	echo "DEBUG: utils.sh"
+	echo "TEST"
+	
+	return 1
+}

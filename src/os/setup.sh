@@ -74,6 +74,8 @@ main() {
     else
         download_utils || exit 1
     fi
+	
+	test
 
 }
 
