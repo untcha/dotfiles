@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "DEBUG: setup.sh/main"
+echo "DEBUG: utils.sh"
