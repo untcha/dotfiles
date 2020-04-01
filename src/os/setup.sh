@@ -186,7 +186,7 @@ main() {
 	# yet set up, and they will need to be downloaded.
 	
 	printf "%s" "${BASH_SOURCE[0]}" | grep "setup.sh" &> /dev/null \
-		|| test
+		|| download_dotfiles
 	
 	
 	
