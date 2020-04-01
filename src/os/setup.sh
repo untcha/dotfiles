@@ -4,8 +4,13 @@ declare -r TMP_PATH="/tmp/dotfiles-tmp"
 
 declare -r GITHUB_REPOSITORY="untcha/dotfiles"
 
+declare -r DOTFILES_TARBALL_URL="https://github.com/$GITHUB_REPOSITORY/tarball/master"
 declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/master/src/os/utils.sh"
 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+declare dotfilesDirectory="$HOME/.dotfiles"
+declare skipQuestions=false
 
 # ----------------------------------------------------------------------
 # | Helper Functions                                                   |
@@ -39,19 +44,107 @@ download() {
 
 }
 
-download_utils() {
+download_dotfiles() {
 
     local tmpFile=""
 
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    print_in_purple "\n • Download and extract archive\n\n"
+
     tmpFile="$(mktemp "$TMP_PATH")"
 
-    download "$DOTFILES_UTILS_URL" "$tmpFile" \
-        && . "$tmpFile" \
-        && rm -rf "$tmpFile" \
-        && return 0
+    download "$DOTFILES_TARBALL_URL" "$tmpFile"
+    print_result $? "Download archive" "true"
+    printf "\n"
 
-   return 1
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    if ! $skipQuestions; then
+
+        ask_for_confirmation "Do you want to store the dotfiles in '$dotfilesDirectory'?"
+
+        if ! answer_is_yes; then
+            dotfilesDirectory=""
+            while [ -z "$dotfilesDirectory" ]; do
+                ask "Please specify another location for the dotfiles (path): "
+                dotfilesDirectory="$(get_answer)"
+            done
+        fi
+
+        # Ensure the `dotfiles` directory is available
+
+        while [ -e "$dotfilesDirectory" ]; do
+            ask_for_confirmation "'$dotfilesDirectory' already exists, do you want to overwrite it?"
+            if answer_is_yes; then
+                rm -rf "$dotfilesDirectory"
+                break
+            else
+                dotfilesDirectory=""
+                while [ -z "$dotfilesDirectory" ]; do
+                    ask "Please specify another location for the dotfiles (path): "
+                    dotfilesDirectory="$(get_answer)"
+                done
+            fi
+        done
+
+        printf "\n"
+
+    else
+
+        rm -rf "$dotfilesDirectory" &> /dev/null
+
+    fi
+
+    mkdir -p "$dotfilesDirectory"
+    print_result $? "Create '$dotfilesDirectory'" "true"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Extract archive in the `dotfiles` directory.
+
+    extract "$tmpFile" "$dotfilesDirectory"
+    print_result $? "Extract archive" "true"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    rm -rf "$tmpFile"
+    print_result $? "Remove archive"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    cd "$dotfilesDirectory/src/os" \
+        || return 1
+
+}
+
+download_utils() {
+	
+	local tmpFile=""
+	
+	tmpFile="$(mktemp "$TMP_PATH")"
+	
+	download "$DOTFILES_UTILS_URL" "$tmpFile" \
+		&& . "$tmpFile" \
+		&& rm -rf "$tmpFile" \
+		&& return 0
+	
+	return 1
+	
+}
+
+extract() {
+	
+	local archive="$1"
+	local outputDir="$2"
+	
+	if command -v "tar" &> /dev/null; then
+		tar -zxf "$archive" --strip-components 1 -C "$outputDir"
+		return $?
+	fi
+	
+	return 1
+	
 }
 
 # ----------------------------------------------------------------------
@@ -67,7 +160,7 @@ main() {
 	cd "$(dirname "${BASH_SOURCE[0]}")" \
 		|| exit 1
 	
-	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	
 	# Load utils
 	
@@ -79,9 +172,14 @@ main() {
 	
 	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	
+	skip_questions "$@" \
+		&& skipQuestions=true
+	
+	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
 	ask_for_sudo
 	
-	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	
 	# Check if this script was run directly (./<path>/setup.sh),
 	# and if not, it most likely means that the dotfiles were not
