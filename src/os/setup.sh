@@ -70,13 +70,26 @@ main() {
 	# Load utils
 	
 	if [ -s "utils.sh" ]; then
-        . "utils.sh" || exit 1
-    else
-        download_utils || exit 1
-    fi
+		. "utils.sh" || exit 1
+	else
+		download_utils || exit 1
+	fi
 	
-	test
-
+	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	
+	ask_for_sudo
+	
+	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	
+	# Check if this script was run directly (./<path>/setup.sh),
+	# and if not, it most likely means that the dotfiles were not
+	# yet set up, and they will need to be downloaded.
+	
+	printf "%s" "${BASH_SOURCE[0]}" | grep "setup.sh" &> /dev/null \
+		|| test
+	
+	
+	
 }
 
 main "$@"
