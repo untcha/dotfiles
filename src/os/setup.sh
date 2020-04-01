@@ -1,5 +1,7 @@
 #!/bin/bash
 
+declare -r TMP_PATH="/tmp/dotfiles-tmp"
+
 declare -r GITHUB_REPOSITORY="untcha/dotfiles"
 
 declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/master/src/os/utils.sh"
@@ -41,7 +43,7 @@ download_utils() {
 
     local tmpFile=""
 
-    tmpFile="$(mktemp /tmp/dotfiles-tmp)"
+    tmpFile="$(mktemp "$TMP_PATH")"
 
     download "$DOTFILES_UTILS_URL" "$tmpFile" \
         && . "$tmpFile" \
