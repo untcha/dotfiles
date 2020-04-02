@@ -50,7 +50,7 @@ download_dotfiles() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    print_in_purple "\n • Download and extract archive\n\n"
+    print_in_purple "\n • Download and extract dotfiles archive\n\n"
 
     tmpFile="$(mktemp "$TMP_PATH")"
 
@@ -188,7 +188,19 @@ main() {
 	printf "%s" "${BASH_SOURCE[0]}" | grep "setup.sh" &> /dev/null \
 		|| download_dotfiles
 	
+	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	
+	#TODO create_directories.sh
+	
+	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	#TODO create_local_config_files.sh
+	
+	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	./install/main.sh
+	
+	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	
 }
 
