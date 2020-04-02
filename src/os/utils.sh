@@ -40,6 +40,28 @@ get_answer() {
 	printf "%s" "$REPLY"
 }
 
+get_os() {
+	
+	local os=""
+	local kernelName=""
+	
+	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	kernelName="$(uname -s)"
+	
+	if [ "$kernelName" == "Darwin" ]; then
+		os="macos"
+	elif [ "$kernelName" == "Linux" ] && \
+		[ -e "/etc/os-release" ]; then
+		os="$(. /etc/os-release; printf "%s" "$ID")"
+	else
+		os="$kernelName"
+	fi
+	
+	printf "%s" "$os"
+	
+}
+
 print_error() {
 	print_in_red "   [✖] $1 $2\n"
 }
