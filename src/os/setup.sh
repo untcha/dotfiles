@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -r TMP_PATH="/tmp/dotfiles-tmp"
+declare TMP_PATH="/tmp/dotfiles-tmp"
 
 declare -r GITHUB_REPOSITORY="untcha/dotfiles"
 
