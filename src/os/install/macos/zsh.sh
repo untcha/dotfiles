@@ -35,7 +35,7 @@ change_default_shell() {
 	
 	if ! grep "$newShellPath" < /etc/shells &> /dev/null; then
 		execute \
-			"printf '%s\n' '$newShellPath' | sudo tee -a /etc/shells" \
+			"printf '%s\n' '$newShellPath' | tee -a /etc/shells" \
 			"Zsh (add '$newShellPath' in '/etc/shells')" \
 		|| return 1
 	fi
@@ -46,7 +46,7 @@ change_default_shell() {
 	# (macOS uses by default an older version of `Bash`).
 	
 	chsh -s "$newShellPath" &> /dev/null
-	print_result $? "Bash (use latest version)"
+	print_result $? "Zsh (use latest version)"
 	
 }
 
