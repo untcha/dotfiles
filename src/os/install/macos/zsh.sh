@@ -56,7 +56,7 @@ main() {
 	
 	print_in_purple "\n   Shell\n\n"
 	
-	brew_install "Zsh" "zsh" \
+	brew_install "Zsh Test" "zsh" \
 		&& change_default_shell
 	
 	#brew_install "Bash Completion 2" "bash-completion@2"
