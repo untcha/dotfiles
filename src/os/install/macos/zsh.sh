@@ -42,9 +42,9 @@ change_default_shell() {
 	
 	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	
-	# Set latest version of `Bash` as the default
-	# (macOS uses by default an older version of `Bash`).
-	
+	# Set latest version of `Zsh` as the default
+	# (macOS uses by default an older version of `Zsh`).
+	echo "DEBUG"
 	chsh -s "$newShellPath" &> /dev/null
 	print_result $? "Zsh (use latest version)"
 	
