@@ -72,7 +72,7 @@ main() {
 	
 	print_in_purple "\n   Shell\n\n"
 	
-	brew_install "Zsh Test" "zsh" \
+	brew_install "Zsh" "zsh" \
 		&& change_default_shell
 	
 	create_zshrc
