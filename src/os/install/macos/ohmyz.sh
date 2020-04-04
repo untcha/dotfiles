@@ -24,8 +24,8 @@ main() {
 	
 	install_oh-my-zsh
 	
-	brew_install "zsh-autosuggestions"
-	brew_install "zsh-syntax-highlighting"
+	brew_install "zsh-autosuggestions" "zsh-autosuggestions"
+	brew_install "zsh-syntax-highlighting" "zsh-syntax-highlighting"
 	
 }
 
