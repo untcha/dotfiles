@@ -77,8 +77,6 @@ main() {
 	
 	create_zshrc
 	
-	#brew_install "Bash Completion 2" "bash-completion@2"
-
 }
 
 main
