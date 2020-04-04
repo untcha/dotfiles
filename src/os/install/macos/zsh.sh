@@ -62,7 +62,7 @@ create_zshrc() {
 		printf "%s\n" "# Created by newuser for $zshVersion" >> "$FILE_PATH"
 	fi
 	
-	print_result $? "$FILE_PATH"
+	print_result $? "Create '$FILE_PATH'" "true"
 	
 }
 
