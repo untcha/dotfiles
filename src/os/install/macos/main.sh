@@ -10,3 +10,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 ./homebrew.sh
 ./zsh.sh
 ./ohmyz.sh
+./brewfile.sh
