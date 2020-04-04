@@ -69,6 +69,14 @@ brew_tap() {
 	brew tap "$1" &> /dev/null
 }
 
+brew_tap_only() {
+	
+	execute \
+		"brew tap '$1'" \
+		"tap '$1'"
+	
+}
+
 brew_update() {
 	
 	execute \
