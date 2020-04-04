@@ -50,6 +50,22 @@ change_default_shell() {
 	
 }
 
+create_zshrc() {
+	
+	declare -r FILE_PATH="$HOME/.zshrc"
+	
+	local zshVersion=$(zsh --version | awk '{print $2}')
+	
+	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	if [ ! -e "$FILE_PATH" ] || [ -z "$FILE_PATH" ]; then
+		printf "%s\n" "# Created by newuser for $zshVersion" >> "$FILE_PATH"
+	fi
+	
+	print_result $? "$FILE_PATH"
+	
+}
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 main() {
@@ -58,6 +74,8 @@ main() {
 	
 	brew_install "Zsh Test" "zsh" \
 		&& change_default_shell
+	
+	create_zshrc
 	
 	#brew_install "Bash Completion 2" "bash-completion@2"
 
