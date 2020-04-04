@@ -45,7 +45,7 @@ change_default_shell() {
 	# Set latest version of `Zsh` as the default
 	# (macOS uses by default an older version of `Zsh`).
 	
-	sudo chsh -s "$newShellPath" &> /dev/null
+	chsh -s "$newShellPath" &> /dev/null
 	print_result $? "Zsh (use latest version)"
 	
 }
