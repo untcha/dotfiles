@@ -18,7 +18,7 @@ install_oh-my-zsh() {
 
 customize_zshrc() {
 	
-	declare -r ZSHRC_PATH="$HOME/.zshrc-test"
+	declare -r ZSHRC_PATH="$HOME/.zshrc"
 	
 	local zshAutosuggestionsPath="/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 	local zshSyntaxHighlightingPath="/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
