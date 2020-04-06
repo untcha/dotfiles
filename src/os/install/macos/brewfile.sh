@@ -18,19 +18,19 @@ taps() {
 brews() {
 	
 	# Cask dependencies
-	brew_install "brew mas"				"mas"
+	brew_install "brew mas" "mas"
 	
 	# CLI utilities
-	brew_install "brew curl"			"curl"
-	brew_install "brew git"				"git"
-	brew_install "brew grep"			"grep"
-	brew_install "brew mpssh"			"mpssh"
-	brew_install "brew pv"				"pv"
-	brew_install "brew pwgen"			"pwgen"
-	brew_install "brew ripgrep"			"ripgrep"
-	brew_install "brew ssh-copy-id"		"ssh-copy-id"
-	brew_install "brew tree" 			"tree"
-	brew_install "brew wget" 			"wget"
+	brew_install "brew curl" "curl"
+	brew_install "brew git" "git"
+	brew_install "brew grep" "grep"
+	brew_install "brew mpssh" "mpssh"
+	brew_install "brew pv" "pv"
+	brew_install "brew pwgen" "pwgen"
+	brew_install "brew ripgrep" "ripgrep"
+	brew_install "brew ssh-copy-id" "ssh-copy-id"
+	brew_install "brew tree" "tree"
+	brew_install "brew wget" "wget"
 	
 	# Shell (tools)
 	brew_install "antigen" "antigen"
@@ -52,6 +52,16 @@ brews() {
 	brew_install "fping" "fping"
 	brew_install "prettyping" "prettyping"
 	brew_install "speedtest_cli" "speedtest_cli"
+	
+}
+
+casks() {
+	
+	brew_install "1Password" "1password" "homebrew/cask" "cask"
+	brew_install "Google Chrome" "google-chrome" "homebrew/cask" "cask"
+	
+	
+	#brew_install "" "" "" ""
 	
 }
 
