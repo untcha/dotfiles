@@ -78,7 +78,7 @@ casks() {
 	# TODO: Nik Collection; Capture One
 }
 
-mas() {
+#mas() {
 	
 	# Affinity Designer
 	# Affinity Photo
@@ -92,7 +92,7 @@ mas() {
 	# Todoist
 	# WhatsApp
 	
-}
+#}
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
