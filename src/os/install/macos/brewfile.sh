@@ -58,10 +58,40 @@ brews() {
 casks() {
 	
 	brew_install "1Password" "1password" "homebrew/cask" "cask"
+	brew_install "Alfred" "alfred" "homebrew/cask" "cask"
+	brew_install "Boxcryptor" "boxcryptor" "homebrew/cask" "cask"
+	brew_install "CleanMyMac X" "cleanmymac" "homebrew/cask" "cask"
+	brew_install "coconutBattery" "coconutbattery" "homebrew/cask" "cask"
+	brew_install "Dropbox" "dropbox" "homebrew/cask" "cask"
+	brew_install "FastRawViewer" "fastrawviewer" "homebrew/cask" "cask"
 	brew_install "Google Chrome" "google-chrome" "homebrew/cask" "cask"
-	
+	brew_install "iTerm" "iterm2" "homebrew/cask" "cask"
+	brew_install "Java" "java" "homebrew/cask" "cask"
+	brew_install "Notable" "notable" "homebrew/cask" "cask"
+	brew_install "Path Finder" "path-finder" "homebrew/cask" "cask"
+	brew_install "Retrobatch" "retrobatch" "homebrew/cask" "cask"
 	
 	#brew_install "" "" "" ""
+	
+	
+	
+	# TODO: Nik Collection; Capture One
+}
+
+mas() {
+	
+	# Affinity Designer
+	# Affinity Photo
+	# Amphetamine
+	# Fantastical
+	# Magnet
+	# PDF Expert
+	# Reeder
+	# Spark
+	# Textastic
+	# Todoist
+	# WhatsApp
+	
 	
 }
 
@@ -69,7 +99,7 @@ casks() {
 
 main() {
 	
-	print_in_purple "\n   Taps, Brews and Casks\n\n"
+	print_in_purple "\n   Taps, Brews, Casks and App Store\n\n"
 	
 	taps
 	brews
