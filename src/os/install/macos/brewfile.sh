@@ -21,7 +21,7 @@ brews() {
 	brew_install "mas" "mas"
 	
 	# CLI utilities
-	brew_install "curl" "curl"
+	brew_install "curl" "brew curl"
 	brew_install "git" "git"
 	brew_install "grep" "grep"
 	brew_install "mpssh" "mpssh"
