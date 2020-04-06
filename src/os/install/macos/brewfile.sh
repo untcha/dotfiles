@@ -46,8 +46,7 @@ brews() {
 	brew_install "highlight" "highlight"
 	brew_install "jenv" "jenv"
 	brew_install "pandoc" "pandoc"
-	brew_install "xdotool" "xdotool"
-	brew_install "" ""
+	#brew_install "xdotool" "xdotool"
 
 	# Network tools
 	brew_install "fping" "fping"
