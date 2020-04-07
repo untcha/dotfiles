@@ -73,7 +73,7 @@ brew_tap_only() {
 	
 	execute \
 		"brew tap '$1'" \
-		"tap '$1'"
+		"$1"
 	
 }
 

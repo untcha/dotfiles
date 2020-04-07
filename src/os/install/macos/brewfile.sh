@@ -18,19 +18,19 @@ taps() {
 brews() {
 	
 	# Cask dependencies
-	brew_install "brew mas" "mas"
+	brew_install "mas" "mas"
 	
 	# CLI utilities
-	brew_install "brew curl" "curl"
-	brew_install "brew git" "git"
-	brew_install "brew grep" "grep"
-	brew_install "brew mpssh" "mpssh"
-	brew_install "brew pv" "pv"
-	brew_install "brew pwgen" "pwgen"
-	brew_install "brew ripgrep" "ripgrep"
-	brew_install "brew ssh-copy-id" "ssh-copy-id"
-	brew_install "brew tree" "tree"
-	brew_install "brew wget" "wget"
+	brew_install "curl" "curl"
+	brew_install "git" "git"
+	brew_install "grep" "grep"
+	brew_install "mpssh" "mpssh"
+	brew_install "pv" "pv"
+	brew_install "pwgen" "pwgen"
+	brew_install "ripgrep" "ripgrep"
+	brew_install "ssh-copy-id" "ssh-copy-id"
+	brew_install "tree" "tree"
+	brew_install "wget" "wget"
 	
 	# Shell (tools)
 	brew_install "antigen" "antigen"
@@ -82,10 +82,13 @@ casks() {
 
 main() {
 	
-	print_in_purple "\n   Taps, Brews and Casks\n\n"
-	
+	print_in_purple "\n   Tap\n\n"
 	taps
+	
+	print_in_purple "\n   Brew\n\n"
 	brews
+	
+	print_in_purple "\n   Casks\n\n"
 	casks
 	
 }
