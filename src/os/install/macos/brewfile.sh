@@ -78,32 +78,15 @@ casks() {
 	# TODO: Nik Collection; Capture One
 }
 
-mas() {
-	
-	function_mas_install "Affinity Designer" "824171161"
-	function_mas_install "Affinity Photo" "824183456"
-	function_mas_install "Amphetamine" "937984704"
-	function_mas_install "Fantastical" "975937182"
-	function_mas_install "Magnet" "441258766"
-	function_mas_install "PDF Expert" "1055273043"
-	function_mas_install "Reeder" "1449412482"
-	function_mas_install "Spark" "1176895641"
-	function_mas_install "Textastic" "572491815"
-	function_mas_install "Todoist" "585829637"
-	function_mas_install "WhatsApp" "1147396723"
-	
-}
-
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 main() {
 	
-	print_in_purple "\n   Taps, Brews, Casks and App Store\n\n"
+	print_in_purple "\n   Taps, Brews and Casks\n\n"
 	
-	#taps
-	#brews
-	#casks
-	mas
+	taps
+	brews
+	casks
 	
 }
 
