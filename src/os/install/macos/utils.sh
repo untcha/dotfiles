@@ -49,6 +49,32 @@ brew_install() {
 
 }
 
+function_mas_install () {
+	
+	declare -r APP_NAME="$1"
+	declare -r PRODUCT_ID="$2"
+	
+	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	# Check if `mas-cli` is installed.
+	
+	if ! cmd_exists "mas"; then
+		print_error "$APP_NAME ('mas-cli' is not installed)"
+		return 1
+	fi
+	
+	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	if mas list | grep $PRODUCT_ID &> /dev/null; then
+		print_success "$APP_NAME"
+	else
+		execute \
+			"mas install $PRODUCT_ID" \
+			"$APP_NAME"
+	fi
+	
+}
+
 brew_prefix() {
 
     local path=""
