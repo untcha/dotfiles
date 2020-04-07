@@ -11,3 +11,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 ./zsh.sh
 ./ohmyz.sh
 ./brewfile.sh
+./macappstore.sh
