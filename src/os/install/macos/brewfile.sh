@@ -100,9 +100,9 @@ main() {
 	
 	print_in_purple "\n   Taps, Brews, Casks and App Store\n\n"
 	
-	taps
-	brews
-	casks
+	#taps
+	#brews
+	#casks
 	mas
 	
 }
