@@ -71,11 +71,8 @@ casks() {
 	brew_install "Path Finder" "path-finder" "homebrew/cask" "cask"
 	brew_install "Retrobatch" "retrobatch" "homebrew/cask" "cask"
 	
-	#brew_install "" "" "" ""
+	#TODO: Capture One; Nik Collection; sdkman.io
 	
-	
-	
-	# TODO: Nik Collection; Capture One
 }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

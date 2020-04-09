@@ -50,6 +50,15 @@ main() {
 	function_mas_install "Todoist" "585829637"
 	function_mas_install "WhatsApp" "1147396723"
 	
+	#TODO: Choose between Home and Work
+	#Word: 462054704
+	#Powerpoint: 462062816
+	#Excel: 462058435
+	#Outlook: 985367838
+	#OneDrive: 823766827
+	#OneNote: 784801555
+	#https://github.com/mas-cli/mas/issues/220
+	
 }
 
 main
