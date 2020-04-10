@@ -12,3 +12,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 ./ohmyz.sh
 ./brewfile.sh
 ./macappstore.sh
+./java.sh
