@@ -25,6 +25,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # System Preferences / Dock
 ./sp-dock.sh
 
+# System Preferences / Mission Control
+./sp-mission-control.sh
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Kill affected applications
