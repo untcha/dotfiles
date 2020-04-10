@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cd "$(dirname "${BASH_SOURCE[0]}")"
+cd "$(dirname "${BASH_SOURCE[0]}")" \
+    && . "../../utils.sh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -39,10 +40,14 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Kill affected applications
 
 for app in "Activity Monitor" \
-    "cfprefsd" \
-    "Dock" \
-    "Finder" \
-    "NotificationCenter" \
-    "SystemUIServer"; do
-    killall "${app}" &> /dev/null
+	"cfprefsd" \
+	"Dock" \
+	"Finder" \
+	"NotificationCenter" \
+	"SystemUIServer"; do
+		
+	execute "killall ${app} &> /dev/null" \
+		""	
+		
+    #killall "${app}" &> /dev/null
 done
