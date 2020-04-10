@@ -36,12 +36,12 @@ install_sdk() {
 	
 	source "$HOME/.sdkman/bin/sdkman-init.sh"
 	
-	if sdk current java | grep $SDK_VERSION &> /dev/null; then
+	if sdk current $SDK_NAME | grep $SDK_VERSION &> /dev/null; then
 		print_success "$SDK_READABLE_NAME $SDK_VERSION"
-	#else
-	#	execute \
-	#		"sdk install $SDK_NAME $SDK_VERSION" \
-	#		"$SDK_READABLE_NAME $SDK_VERSION"
+	else
+		execute \
+			"sdk install $SDK_NAME $SDK_VERSION" \
+			"$SDK_READABLE_NAME $SDK_VERSION"
 	fi
 	
 }
