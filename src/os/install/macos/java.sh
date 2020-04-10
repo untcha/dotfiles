@@ -34,6 +34,8 @@ install_sdk() {
 	
 	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	
+	source "$HOME/.sdkman/bin/sdkman-init.sh"
+	
 	if sdk current java | grep $SDK_VERSION &> /dev/null; then
 		print_success "$SDK_READABLE_NAME $SDK_VERSION"
 	#else
