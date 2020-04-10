@@ -46,7 +46,7 @@ for app in "Activity Monitor" \
 	"NotificationCenter" \
 	"SystemUIServer"; do
 		
-	execute "killall ${app} &> /dev/null" \
+	execute "killall '${app}' &> /dev/null" \
 		""	
 		
     #killall "${app}" &> /dev/null
