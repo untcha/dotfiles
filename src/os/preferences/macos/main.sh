@@ -41,8 +41,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 print_in_purple "\n   Kill apps and restart the system\n\n"
 
-for app in "Activity Monitor" \
-	"cfprefsd" \
+for app in "cfprefsd" \
 	"Dock" \
 	"Finder" \
 	"NotificationCenter" \
