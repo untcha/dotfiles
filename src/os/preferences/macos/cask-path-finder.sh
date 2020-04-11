@@ -17,6 +17,6 @@ execute "defaults write com.cocoatech.PathFinder globalAppsMenuEnabled -int 0 &&
 		 defaults write com.cocoatech.PathFinder kReturnKeyStartsRename -int 1 && \
 		 defaults write com.cocoatech.PathFinder hideTabBarForSingleTab -int 0 && \
 		 defaults write com.cocoatech.PathFinder useLargeAppearanceMode -int 1" \
-	"Path Finder"
+	"Path Finder (Settings)"
 
 print_warning "Path Finder (Manual settings are necessary!)"
