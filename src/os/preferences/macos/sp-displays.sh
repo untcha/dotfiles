@@ -21,6 +21,8 @@ set_resolution() {
 
 main() {
 	
+	print_in_purple "\n   System Preferences - Displays\n\n"
+	
 	# TODO: set resolution depending on MacBook 'scutil --get LocalHostName'
 	set_resolution "1680x1050"
 	
