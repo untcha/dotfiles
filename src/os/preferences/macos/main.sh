@@ -57,6 +57,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 print_in_purple "\n   Application Settings\n\n"
 ./mas-amphetamine.sh
 ./cask-path-finder.sh
+./cask-1password.sh
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
