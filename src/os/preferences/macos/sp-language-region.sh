@@ -18,7 +18,6 @@ execute "defaults write NSGlobalDomain AppleLocale -string 'en_DE'" \
 # Locale for zsh will be set in .zshrc
 
 # Set 'Measurement units' to 'Centimeters' (Metric)
-execute "defaults write NSGlobalDomain AppleMeasurementUnits -string 'Centimeters'" \
-	"Set 'Measurement units' to 'Centimeters' (Metric)"
-execute "defaults write NSGlobalDomain AppleMetricUnits -int 1" \
+execute "defaults write NSGlobalDomain AppleMeasurementUnits -string 'Centimeters' \
+		 defaults write NSGlobalDomain AppleMetricUnits -int 1" \
 	"Set 'Measurement units' to 'Centimeters' (Metric)"
