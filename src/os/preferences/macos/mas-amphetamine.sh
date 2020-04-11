@@ -13,6 +13,6 @@ execute "defaults write com.if.Amphetamine 'Status Item Click' -int 2 && \
 		 defaults write com.if.Amphetamine 'Ignore Battery on AC' -int 1 && \
 		 defaults write com.if.Amphetamine 'Restart DD Session on AC Reconnect' -int 1 && \
 		 defaults write com.if.Amphetamine 'Enable Session State Sound' -int 0" \
-	"Amphetamine"
+	"Amphetamine (settings)"
 
-print_warning "Set 'Launch Amphetamine at Login' manually"
+print_warning "Amphetamine (Set 'Launch Amphetamine at Login' manually!)"
