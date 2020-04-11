@@ -44,7 +44,7 @@ brews() {
 
 	# Other useful tools
 	brew_install "highlight" "highlight"
-	brew_install "jenv" "jenv"
+	#brew_install "jenv" "jenv"
 	brew_install "pandoc" "pandoc"
 	#brew_install "xdotool" "xdotool"
 
@@ -66,12 +66,12 @@ casks() {
 	brew_install "FastRawViewer" "fastrawviewer" "homebrew/cask" "cask"
 	brew_install "Google Chrome" "google-chrome" "homebrew/cask" "cask"
 	brew_install "iTerm" "iterm2" "homebrew/cask" "cask"
-	brew_install "Java" "java" "homebrew/cask" "cask"
+	#brew_install "Java" "java" "homebrew/cask" "cask"
 	brew_install "Notable" "notable" "homebrew/cask" "cask"
 	brew_install "Path Finder" "path-finder" "homebrew/cask" "cask"
 	brew_install "Retrobatch" "retrobatch" "homebrew/cask" "cask"
 	
-	#TODO: Capture One; Nik Collection; sdkman.io
+	#TODO: Capture One; Nik Collection
 	
 }
 
