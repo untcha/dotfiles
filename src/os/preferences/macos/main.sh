@@ -44,6 +44,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # System Preferences / Trackpad
 ./sp-trackpad.sh
 
+# System Preferences / Displays
+./sp-displays.sh
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Kill affected applications
