@@ -38,6 +38,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # System Preferences / Notifications
 ./sp-notifications.sh
 
+# System Preferences / Keyboard
+./sp-keyboard.sh
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Kill affected applications
