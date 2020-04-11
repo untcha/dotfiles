@@ -39,6 +39,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Kill affected applications
 
+print_in_purple "\n   Kill apps and restart the system\n\n"
+
 for app in "Activity Monitor" \
 	"cfprefsd" \
 	"Dock" \
@@ -47,7 +49,6 @@ for app in "Activity Monitor" \
 	"SystemUIServer"; do
 		
 	execute "killall '${app}' &> /dev/null" \
-		""	
-		
-    #killall "${app}" &> /dev/null
+		"killall '${app}'"	
+	
 done
