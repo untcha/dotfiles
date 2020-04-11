@@ -67,7 +67,8 @@ for app in "cfprefsd" \
 	"Dock" \
 	"Finder" \
 	"NotificationCenter" \
-	"SystemUIServer"; do
+	"SystemUIServer" \
+	"Amphetamine"; do
 		
 	execute "killall '${app}' &> /dev/null" \
 		"killall '${app}'"	
