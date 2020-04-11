@@ -41,6 +41,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # System Preferences / Keyboard
 ./sp-keyboard.sh
 
+# System Preferences / Trackpad
+./sp-trackpad.sh
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Kill affected applications
