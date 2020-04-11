@@ -13,17 +13,18 @@ execute "defaults write com.apple.systemuiserver 'NSStatusItem Visible com.apple
 		 defaults write com.apple.systemuiserver 'NSStatusItem Visible com.apple.menuextra.battery' -int 1 && \
 		 defaults write com.apple.systemuiserver 'NSStatusItem Visible com.apple.menuextra.bluetooth' -int 1 && \
 		 defaults write com.apple.systemuiserver 'NSStatusItem Visible com.apple.menuextra.clock' -int 1 && \
-		 defaults write com.apple.systemuiserver 'NSStatusItem Visible com.apple.menuextra.volume' -int 1 && \
-		 defaults write com.apple.systemuiserver menuExtras ' \
-		 ( \
-			'/System/Library/CoreServices/Menu Extras/Clock.menu', \
-			'/System/Library/CoreServices/Menu Extras/Battery.menu', \
-			'/System/Library/CoreServices/Menu Extras/AirPort.menu', \
-			'/System/Library/CoreServices/Menu Extras/Bluetooth.menu', \
-			'/System/Library/CoreServices/Menu Extras/Volume.menu', \
-			'/System/Library/CoreServices/Menu Extras/Displays.menu' \
-		 )'" \
+		 defaults write com.apple.systemuiserver 'NSStatusItem Visible com.apple.menuextra.volume' -int 1" \
 	"Show menu bar icons"
+
+defaults write com.apple.systemuiserver menuExtras '
+(
+    "/System/Library/CoreServices/Menu Extras/Clock.menu",
+    "/System/Library/CoreServices/Menu Extras/Battery.menu",
+    "/System/Library/CoreServices/Menu Extras/AirPort.menu",
+    "/System/Library/CoreServices/Menu Extras/Bluetooth.menu",
+    "/System/Library/CoreServices/Menu Extras/Volume.menu",
+    "/System/Library/CoreServices/Menu Extras/Displays.menu"
+)'
 
 # Show Battery percentage
 execute "defaults write com.apple.menuextra.battery ShowPercent -string 'YES'" \
