@@ -37,3 +37,16 @@ execute "defaults write com.apple.menuextra.clock DateFormat -string 'HH:mm:ss'"
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 execute "sudo systemsetup -settimezone 'Europe/Berlin' > /dev/null" \
 	"Set the timezone to 'Europe/Berlin'"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+print_in_purple "\n   Misc settings - Finder\n\n"
+
+execute "defaults write com.apple.finder NewWindowTarget -string 'PfHm' && \
+		 defaults write com.apple.finder NewWindowTargetPath -string 'file:///Users/untcha/' && \
+		 defaults write com.apple.finder ShowRemovableMediaOnDesktop -int 0 && \
+		 defaults write NSGlobalDomain AppleShowAllExtensions -int 1" \
+	"Finder (Settings)"
+
+
+
