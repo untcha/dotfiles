@@ -81,7 +81,7 @@ main() {
 	create_zshrc
 	source $HOME/.zshrc
 	
-	exec zsh
+	#exec zsh
 	echo $SHELL
 	
 }
