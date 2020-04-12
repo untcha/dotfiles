@@ -51,22 +51,22 @@ customize_zshrc() {
 	local lineNumber=$(grep -n "# User configuration" $ZSHRC_PATH | grep -Eo '^[^:]+')
 	
 	# Add 'export PATH="$HOME/.jenv/bin:$PATH"'
-	if ! grep -q 'export PATH="$HOME/.jenv/bin:$PATH"' "$ZSHRC_PATH"; then
-		((lineNumber++))
-		sed -i '' $lineNumber'i\
-			export PATH="$HOME/.jenv/bin:$PATH"'$'\n' $ZSHRC_PATH
-		
-		print_success 'Added: export PATH="$HOME/.jenv/bin:$PATH"'
-	fi
+	#if ! grep -q 'export PATH="$HOME/.jenv/bin:$PATH"' "$ZSHRC_PATH"; then
+	#	((lineNumber++))
+	#	sed -i '' $lineNumber'i\
+	#		export PATH="$HOME/.jenv/bin:$PATH"'$'\n' $ZSHRC_PATH
+	#	
+	#	print_success 'Added: export PATH="$HOME/.jenv/bin:$PATH"'
+	#fi
 	
 	# Add 'eval "$(jenv init -)"'
-	if ! grep -q 'eval "$(jenv init -)"' "$ZSHRC_PATH"; then
-		((lineNumber++))
-		sed -i '' $lineNumber'i\
-			eval "$(jenv init -)"'$'\n' $ZSHRC_PATH
-		
-		print_success 'Added: eval "$(jenv init -)"'
-	fi
+	#if ! grep -q 'eval "$(jenv init -)"' "$ZSHRC_PATH"; then
+	#	((lineNumber++))
+	#	sed -i '' $lineNumber'i\
+	#		eval "$(jenv init -)"'$'\n' $ZSHRC_PATH
+	#	
+	#	print_success 'Added: eval "$(jenv init -)"'
+	#fi
 	
 	# Add 'export PATH="/usr/local/sbin:$PATH"'
 	if ! grep -q 'export PATH="/usr/local/sbin:$PATH"' "$ZSHRC_PATH"; then
