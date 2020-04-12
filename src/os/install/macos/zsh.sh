@@ -47,10 +47,6 @@ change_default_shell() {
 	
 	chsh -s "$newShellPath" &> /dev/null
 	
-	echo $SHELL
-	exec zsh
-	echo $SHELL
-	
 	print_result $? "Zsh (use latest version)"
 	
 }
@@ -80,8 +76,13 @@ main() {
 	brew_install "Zsh" "zsh" \
 		&& change_default_shell
 	
+	echo $SHELL
+	
 	create_zshrc
 	source .zshrc
+	
+	exec zsh
+	echo $SHELL
 	
 }
 
