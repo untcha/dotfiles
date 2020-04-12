@@ -46,6 +46,11 @@ change_default_shell() {
 	# (macOS uses by default an older version of `Zsh`).
 	
 	chsh -s "$newShellPath" &> /dev/null
+	
+	echo $SHELL
+	exec zsh
+	echo $SHELL
+	
 	print_result $? "Zsh (use latest version)"
 	
 }
@@ -76,6 +81,7 @@ main() {
 		&& change_default_shell
 	
 	create_zshrc
+	source .zshrc
 	
 }
 
