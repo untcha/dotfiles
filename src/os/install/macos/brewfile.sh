@@ -53,8 +53,8 @@ brews() {
 	#brew_install "prettyping" "prettyping"
 	brew_install "speedtest_cli" "speedtest_cli"
 	
-	brew_install "zsh-autosuggestions" "zsh-autosuggestions"
-	brew_install "zsh-syntax-highlighting" "zsh-syntax-highlighting"
+	#brew_install "zsh-autosuggestions" "zsh-autosuggestions"
+	#brew_install "zsh-syntax-highlighting" "zsh-syntax-highlighting"
 	
 }
 
