@@ -8,8 +8,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 ./xcode.sh
 ./homebrew.sh
-./zsh.sh
-./ohmyz.sh
-./brewfile.sh
-./macappstore.sh
-./java.sh
+#./zsh.sh
+#./ohmyz.sh
+#./brewfile.sh
+#./macappstore.sh
+#./java.sh
