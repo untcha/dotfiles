@@ -79,7 +79,7 @@ main() {
 	echo $SHELL
 	
 	create_zshrc
-	source .zshrc
+	source $HOME/.zshrc
 	
 	exec zsh
 	echo $SHELL
