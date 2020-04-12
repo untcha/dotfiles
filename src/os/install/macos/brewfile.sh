@@ -25,33 +25,36 @@ brews() {
 	brew_install "git" "git"
 	brew_install "grep" "grep"
 	brew_install "mpssh" "mpssh"
-	brew_install "pv" "pv"
-	brew_install "pwgen" "pwgen"
-	brew_install "ripgrep" "ripgrep"
-	brew_install "ssh-copy-id" "ssh-copy-id"
+	#brew_install "pv" "pv"
+	#brew_install "pwgen" "pwgen"
+	#brew_install "ripgrep" "ripgrep"
+	#brew_install "ssh-copy-id" "ssh-copy-id"
 	brew_install "tree" "tree"
 	brew_install "wget" "wget"
 	
 	# Shell (tools)
-	brew_install "antigen" "antigen"
+	#brew_install "antigen" "antigen"
 	
 	# macOS tools
 	brew_install "clamav" "clamav"
 	brew_install "displayplacer" "displayplacer"
-	brew_install "duti" "duti"
-	brew_install "mackup" "mackup"
+	#brew_install "duti" "duti"
+	#brew_install "mackup" "mackup"
 	brew_install "topgrade" "topgrade"
 
 	# Other useful tools
-	brew_install "highlight" "highlight"
+	#brew_install "highlight" "highlight"
 	#brew_install "jenv" "jenv"
-	brew_install "pandoc" "pandoc"
+	#brew_install "pandoc" "pandoc"
 	#brew_install "xdotool" "xdotool"
 
 	# Network tools
-	brew_install "fping" "fping"
-	brew_install "prettyping" "prettyping"
+	#brew_install "fping" "fping"
+	#brew_install "prettyping" "prettyping"
 	brew_install "speedtest_cli" "speedtest_cli"
+	
+	brew_install "zsh-autosuggestions" "zsh-autosuggestions"
+	brew_install "zsh-syntax-highlighting" "zsh-syntax-highlighting"
 	
 }
 
