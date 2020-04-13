@@ -61,7 +61,6 @@ create_zshrc() {
 	
 	if [ ! -e "$FILE_PATH" ] || [ -z "$FILE_PATH" ]; then
 		printf "%s\n" "# Created by newuser for $zshVersion" >> "$FILE_PATH"
-		printf "%s\n" "ZSH_DISABLE_COMPFIX=true" >> "$FILE_PATH"
 	fi
 	
 	print_result $? "Create '$FILE_PATH'" "true"
