@@ -76,13 +76,8 @@ main() {
 	brew_install "Zsh" "zsh" \
 		&& change_default_shell
 	
-	echo $SHELL
-	
 	create_zshrc
 	source $HOME/.zshrc
-	
-	#exec zsh
-	echo $SHELL
 	
 }
 
